@@ -1,5 +1,4 @@
-import React from 'react';
-import { Hexagon, Zap, Shield, Globe, Lock, Cpu, Brain, Activity } from 'lucide-react';
+import { Shield, Globe, Lock, Cpu, Activity } from 'lucide-react';
 
 const UnifiedArchitecture = () => {
     const layers = [
@@ -68,7 +67,7 @@ const UnifiedArchitecture = () => {
                 </div>
             </div>
 
-            <style jsx>{`
+            <style>{`
         .w-16 { width: 4rem; }
         .h-18 { height: 4.5rem; }
         .hover-glow:hover {

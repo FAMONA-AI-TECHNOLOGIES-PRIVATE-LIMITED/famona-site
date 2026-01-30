@@ -1,7 +1,6 @@
-import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FileText, ArrowUpRight, ShieldX, Coins, HeartPulse, Scale } from 'lucide-react';
+import { ArrowUpRight, ShieldX, Coins, HeartPulse, Scale } from 'lucide-react';
 
 const HarmStories = () => {
     const cases = [

@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { MessageSquare, X, Send, Terminal, Ghost } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { MessageSquare, X, Send, Terminal } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { logInquiry } from "../lib/InquiryService";

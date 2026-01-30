@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Brain, CheckCircle2, AlertTriangle, ShieldCheck, ArrowRight, BarChart } from 'lucide-react';
+import { useState } from 'react';
+import { Brain, AlertTriangle, ShieldCheck, ArrowRight, BarChart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { logInquiry } from "../lib/InquiryService";

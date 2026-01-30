@@ -6,7 +6,9 @@
  * Google Sheets backend for future marketing and sales synthesis.
  */
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz_XXXXXXXXXXXX/exec"; // Placeholder
+// [REQUIRED] REPLACE THE URL BELOW with your deployed Google Apps Script Web App URL
+// See: c:\Users\AQEEL23\.gemini\antigravity\brain\1d5d7cb5-5654-4985-839c-f12086e56cbb\google_sheets_backend_template.gs
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz_REPLACE_THIS_WITH_YOUR_ACTUAL_URL/exec";
 
 export interface InquiryData {
     source: 'SANDBOX' | 'CHAT' | 'DIAGNOSTIC';

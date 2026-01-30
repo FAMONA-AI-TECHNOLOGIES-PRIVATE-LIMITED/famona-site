@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Play, Sparkles, ShieldCheck, Database, Fingerprint, Lock, ChevronRight } from 'lucide-react';
+import { useState } from 'react';
+import { Lock, Play, Fingerprint, ShieldCheck, Database } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { logInquiry } from "../lib/InquiryService";

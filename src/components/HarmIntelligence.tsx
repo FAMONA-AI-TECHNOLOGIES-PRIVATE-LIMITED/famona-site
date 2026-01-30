@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { AlertCircle, TrendingDown, ShieldAlert, FileWarning, Terminal, Skull } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { useState, useEffect } from 'react';
+import { AlertCircle, TrendingDown, FileWarning, Terminal, Skull } from 'lucide-react';
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 const HarmIntelligence = () => {
     const [logs, setLogs] = useState([
