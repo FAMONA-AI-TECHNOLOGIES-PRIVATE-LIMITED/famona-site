@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Play, Sparkles, ShieldCheck, Database, Fingerprint, Lock, ChevronRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { logInquiry } from "../lib/InquiryService";
 
 const InquirySandbox = () => {
     const [simulating, setSimulating] = useState(false);
@@ -13,7 +14,15 @@ const InquirySandbox = () => {
         setSimulating(true);
         setTimeout(() => {
             setSimulating(false);
-            setResult("INVARIANT_LOCKED: Probabilistic drift neutralized via Ghost-Core protocol.");
+            const res = "INVARIANT_LOCKED: Probabilistic drift neutralized via Ghost-Core protocol.";
+            setResult(res);
+
+            // Agentic Extraction
+            logInquiry({
+                source: 'SANDBOX',
+                result: res,
+                details: { vector: "Autonomous Financial Logic Drift" } // This should be dynamic in a real app
+            });
         }, 2000);
     };
 

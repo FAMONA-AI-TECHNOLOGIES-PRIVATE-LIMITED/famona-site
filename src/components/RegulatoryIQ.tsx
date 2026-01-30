@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Brain, CheckCircle2, AlertTriangle, ShieldCheck, ArrowRight, BarChart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { logInquiry } from "../lib/InquiryService";
 
 const RegulatoryIQ = () => {
     const [step, setStep] = useState(0);
@@ -49,6 +50,13 @@ const RegulatoryIQ = () => {
             setStep(step + 1);
         } else {
             setShowResult(true);
+
+            // Agentic Extraction
+            logInquiry({
+                source: 'DIAGNOSTIC',
+                result: `${score + points} IQ`,
+                details: { finalScore: score + points }
+            });
         }
     };
 

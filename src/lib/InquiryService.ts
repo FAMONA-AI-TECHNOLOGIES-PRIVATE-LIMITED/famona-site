@@ -1,0 +1,47 @@
+/**
+ * Agentic Data Extraction Service
+ * Powered by Famona AI Technologies Pvt Ltd
+ * 
+ * Logic: Captures institutional research telemetry and sends it to a 
+ * Google Sheets backend for future marketing and sales synthesis.
+ */
+
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz_XXXXXXXXXXXX/exec"; // Placeholder
+
+export interface InquiryData {
+    source: 'SANDBOX' | 'CHAT' | 'DIAGNOSTIC';
+    content?: string;
+    result?: string;
+    email?: string;
+    details?: any;
+    timestamp?: string;
+}
+
+export const logInquiry = async (data: InquiryData) => {
+    const payload = {
+        ...data,
+        timestamp: new Date().toISOString(),
+        site: 'famonaai.com',
+        protocol: 'AGENTIC_GOS_v4.3'
+    };
+
+    console.log(`[AGENTIC_EXTRACTION] Capturing ${data.source} telemetry...`, payload);
+
+    try {
+        // We use a beacon or fetch to send data to the sheets endpoint
+        // Using 'no-cors' mode if sending to a simple script without complex headers
+        await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+        });
+
+        return { success: true, message: "Telemetry anchored successfully." };
+    } catch (error) {
+        console.error("[AGENTIC_FAILURE] Data extraction drift detected:", error);
+        return { success: false, error };
+    }
+};

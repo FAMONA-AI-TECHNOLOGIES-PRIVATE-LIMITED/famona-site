@@ -69,7 +69,10 @@ const FamonaVision = () => {
             <Button variant="ghost" size="icon" className="text-white/40 hover:text-white hover:bg-white/5">
               <Search className="w-4 h-4" />
             </Button>
-            <Button className="bg-white text-black hover:bg-blue-600 hover:text-white rounded-lg px-6 h-10 text-[9px] font-black uppercase tracking-widest transition-all shadow-xl shadow-white/5">
+            <Button
+              onClick={() => document.getElementById('research')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-white text-black hover:bg-blue-600 hover:text-white rounded-lg px-6 h-10 text-[9px] font-black uppercase tracking-widest transition-all shadow-xl shadow-white/5"
+            >
               Verify CIN
             </Button>
           </div>
@@ -101,7 +104,12 @@ const FamonaVision = () => {
               }} className="bg-blue-600 hover:bg-blue-700 text-white rounded-xl px-12 h-16 text-[11px] font-black uppercase tracking-[0.2em] shadow-2xl shadow-blue-500/20 group">
                 Enter Inquiry Sandbox <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white/10 text-white/40 hover:text-white hover:bg-white/5 rounded-xl px-12 h-16 text-[11px] font-black uppercase tracking-[0.2em] transition-all">
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => document.getElementById('research')?.scrollIntoView({ behavior: 'smooth' })}
+                className="border-white/10 text-white/40 hover:text-white hover:bg-white/5 rounded-xl px-12 h-16 text-[11px] font-black uppercase tracking-[0.2em] transition-all"
+              >
                 Access Research Vault
               </Button>
             </div>
@@ -150,10 +158,18 @@ const FamonaVision = () => {
                 Investigating the substrate of sovereign intelligence. Global research leaders in deterministic, human-aligned governance architectures. Powered by <span className="text-blue-500 font-bold italic">Agentic AI</span> for high-fidelity data extraction and autonomous research telemetry.
               </p>
               <div className="flex items-center gap-6 text-white/10">
-                <Twitter className="w-4 h-4 hover:text-blue-400 cursor-pointer transition-colors" />
-                <Github className="w-4 h-4 hover:text-white cursor-pointer transition-colors" />
-                <Linkedin className="w-4 h-4 hover:text-blue-600 cursor-pointer transition-colors" />
-                <Mail className="w-4 h-4 hover:text-white cursor-pointer transition-colors" />
+                <a href="https://twitter.com/famona_ai" target="_blank" rel="noopener noreferrer">
+                  <Twitter className="w-4 h-4 hover:text-blue-400 cursor-pointer transition-colors" />
+                </a>
+                <a href="https://github.com/FAMONA-AI-TECHNOLOGIES-PRIVATE-LIMITED" target="_blank" rel="noopener noreferrer">
+                  <Github className="w-4 h-4 hover:text-white cursor-pointer transition-colors" />
+                </a>
+                <a href="https://linkedin.com/company/famona-ai" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="w-4 h-4 hover:text-blue-600 cursor-pointer transition-colors" />
+                </a>
+                <a href="mailto:contact@famona.ai">
+                  <Mail className="w-4 h-4 hover:text-white cursor-pointer transition-colors" />
+                </a>
               </div>
             </div>
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { MessageSquare, X, Send, Terminal, Ghost } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { logInquiry } from "../lib/InquiryService";
 
 const GhostChat = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +24,13 @@ const GhostChat = () => {
 
         const userMsg = input;
         setMessages(prev => [...prev, { role: 'user', content: userMsg }]);
+
+        // Agentic Extraction
+        logInquiry({
+            source: 'CHAT',
+            content: userMsg
+        });
+
         setInput("");
         setIsTyping(true);
 
@@ -68,8 +76,8 @@ const GhostChat = () => {
                         {messages.map((msg, i) => (
                             <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                                 <div className={`max-w-[85%] p-4 rounded-2xl text-[11px] leading-relaxed ${msg.role === 'user'
-                                        ? 'bg-blue-600 text-white rounded-tr-none'
-                                        : 'bg-white/5 text-white/70 border border-white/5 rounded-tl-none'
+                                    ? 'bg-blue-600 text-white rounded-tr-none'
+                                    : 'bg-white/5 text-white/70 border border-white/5 rounded-tl-none'
                                     }`}>
                                     {msg.content}
                                 </div>
