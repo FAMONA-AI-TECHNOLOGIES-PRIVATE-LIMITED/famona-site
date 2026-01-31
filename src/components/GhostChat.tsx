@@ -50,6 +50,11 @@ const GhostChat = () => {
         }, 1500);
     };
 
+    const copyInsight = (content: string) => {
+        navigator.clipboard.writeText(content);
+        // We could add a toast here if sonner is available
+    };
+
     return (
         <div className="fixed bottom-8 right-8 z-[100] font-mono">
             {!isOpen ? (
@@ -75,11 +80,20 @@ const GhostChat = () => {
                     <div ref={scrollRef} className="flex-1 overflow-y-auto p-6 space-y-6 scrollbar-hide">
                         {messages.map((msg, i) => (
                             <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                                <div className={`max-w-[85%] p-4 rounded-2xl text-[11px] leading-relaxed ${msg.role === 'user'
+                                <div className={`relative max-w-[85%] p-4 rounded-2xl text-[11px] leading-relaxed group/msg ${msg.role === 'user'
                                     ? 'bg-blue-600 text-white rounded-tr-none'
                                     : 'bg-white/5 text-white/70 border border-white/5 rounded-tl-none'
                                     }`}>
                                     {msg.content}
+                                    {msg.role === 'bot' && (
+                                        <button
+                                            onClick={() => copyInsight(msg.content)}
+                                            className="absolute -right-8 top-0 opacity-0 group-hover/msg:opacity-100 p-1.5 hover:text-blue-400 transition-all"
+                                            title="Copy Insight"
+                                        >
+                                            <Terminal className="w-3 h-3" />
+                                        </button>
+                                    )}
                                 </div>
                             </div>
                         ))}

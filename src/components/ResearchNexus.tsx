@@ -39,7 +39,16 @@ const ResearchNexus = () => {
                         </h2>
 
                         <div className="space-y-6">
-                            <div className="p-6 bg-white/5 border border-white/5 rounded-2xl">
+                            <div className="relative overflow-hidden rounded-2xl border border-white/10 group mb-6">
+                                <img
+                                    src="/brand-banner.png"
+                                    alt="Famona AI Governance Substrate"
+                                    className="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#02020a] via-transparent to-transparent" />
+                            </div>
+
+                            <div className="p-6 bg-white/5 border border-white/5 rounded-2xl relative overflow-hidden">
                                 <div className="text-[10px] font-black uppercase tracking-widest text-white/20 mb-3">Startup Entity Details</div>
                                 <div className="space-y-2 text-sm">
                                     <div className="flex justify-between border-b border-white/5 pb-2">

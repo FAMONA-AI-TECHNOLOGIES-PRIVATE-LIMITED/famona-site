@@ -15,7 +15,7 @@ export interface InquiryData {
     content?: string;
     result?: string;
     email?: string;
-    details?: any;
+    details?: Record<string, unknown>;
     timestamp?: string;
 }
 

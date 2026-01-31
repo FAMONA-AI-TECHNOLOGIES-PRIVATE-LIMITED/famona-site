@@ -16,22 +16,27 @@ import CuriosityLab from './components/CuriosityLab';
 import ResearchNexus from './components/ResearchNexus';
 import InquirySandbox from './components/InquirySandbox';
 import GhostChat from './components/GhostChat';
+import SEO from './components/SEO';
 
 const FamonaVision = () => {
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    const frame = requestAnimationFrame(() => setMounted(true));
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   if (!mounted) return null;
 
   return (
     <div className="min-h-screen bg-[#02020a] text-white selection:bg-blue-500/30 font-sans antialiased overflow-x-hidden">
+      <SEO />
       {/* Dynamic Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-900/10 blur-[120px] rounded-full animate-pulse" />
@@ -44,11 +49,11 @@ const FamonaVision = () => {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${scrolled ? 'bg-[#02020a]/80 backdrop-blur-2xl border-white/5 py-3' : 'bg-transparent border-transparent py-6'}`}>
         <div className="container mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center gap-4 group cursor-pointer">
-            <div className="relative w-12 h-12">
+            <div className="relative w-14 h-14">
               <img
-                src="file:///C:/Users/AQEEL23/.gemini/antigravity/brain/1d5d7cb5-5654-4985-839c-f12086e56cbb/uploaded_media_1769730810224.jpg"
-                alt="Famona AI Shield"
-                className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(59,130,246,0.3)] group-hover:scale-110 transition-transform duration-500"
+                src="/logo-shield.png"
+                alt="Famona AI Sovereign Shield"
+                className="w-full h-full object-contain filter drop-shadow-[0_0_12px_rgba(59,130,246,0.5)] group-hover:scale-110 transition-transform duration-500"
               />
             </div>
             <div className="flex flex-col leading-none">

@@ -1,5 +1,5 @@
 import { GripVertical } from "lucide-react"
-// @ts-ignore
+// @ts-expect-error - react-resizable-panels types are missing or incomplete
 import { PanelGroup, Panel, PanelResizeHandle } from "react-resizable-panels"
 
 import { cn } from "@/lib/utils"

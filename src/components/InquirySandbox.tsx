@@ -3,27 +3,35 @@ import { Lock, Play, Fingerprint, ShieldCheck, Database } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { logInquiry } from "../lib/InquiryService";
+import AlignmentCertificate from './AlignmentCertificate';
 
 const InquirySandbox = () => {
     const [simulating, setSimulating] = useState(false);
     const [consent, setConsent] = useState(false);
     const [result, setResult] = useState<string | null>(null);
+    const [showCertificate, setShowCertificate] = useState(false);
+    const [stats, setStats] = useState({ score: 0, nodeId: '' });
 
     const runSimulation = () => {
         if (!consent) return;
         setSimulating(true);
         setTimeout(() => {
             setSimulating(false);
-            const res = "INVARIANT_LOCKED: Probabilistic drift neutralized via Ghost-Core protocol.";
+            const score = Math.floor(Math.random() * (99.9 - 94.0 + 1) + 94.0);
+            const nodeId = `NODE_${Math.random().toString(36).substring(2, 8).toUpperCase()}`;
+            const res = `INVARIANT_LOCKED: Probabilistic drift neutralized via Ghost-Core protocol. Alignment: ${score}%`;
+
+            setStats({ score, nodeId });
             setResult(res);
+            setShowCertificate(true);
 
             // Agentic Extraction
             logInquiry({
                 source: 'SANDBOX',
                 result: res,
-                details: { vector: "Autonomous Financial Logic Drift" } // This should be dynamic in a real app
+                details: { vector: "Autonomous Financial Logic Drift", alignment: score }
             });
-        }, 2000);
+        }, 2500);
     };
 
     return (
@@ -131,6 +139,17 @@ const InquirySandbox = () => {
                     </div>
                 </div>
             </div>
+
+            {showCertificate && (
+                <div className="fixed inset-0 z-[200] flex items-center justify-center p-6 bg-black/60 backdrop-blur-md animate-in fade-in duration-300">
+                    <AlignmentCertificate
+                        score={stats.score}
+                        nodeId={stats.nodeId}
+                        timestamp={new Date().toLocaleString()}
+                        onClose={() => setShowCertificate(false)}
+                    />
+                </div>
+            )}
         </section>
     );
 };
