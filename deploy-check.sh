@@ -37,6 +37,13 @@ if [ ! -f "index.html" ]; then
     echo "WARNING: index.html not found in root. Vite expects it there."
 fi
 
+# 3. Indian Compliance Check
+if grep -q "UXXXXXXXXXXXXXXPTCXXXXXX" index.html; then
+    echo "CRITICAL: Placeholder CIN found in index.html."
+    echo "ACTION: Replace the placeholder CIN with your actual Corporate Identity Number."
+    exit 1
+fi
+
 # 3. Build Test
 echo "Testing production build..."
 npm run build -- --logLevel silent
