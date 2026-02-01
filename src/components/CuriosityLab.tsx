@@ -16,7 +16,7 @@ const CuriosityLab = () => {
             icon: Car,
             title: "What if your Tesla is hacked?",
             subtitle: "Category: Autonomous Mobility",
-            description: "Your vehicle detects a 'phantom obstacle' at 120km/h in a signal-dead zone, forcing a complete immobilisation. Is it a glitch, or a targeted deterministic intercept?",
+            description: "Your vehicle detects a 'phantom obstacle' at 120km/h in a signal-dead zone, forcing a complete immobilisation. Is it a glitch, or something more?",
             color: "text-blue-400",
             bg: "bg-blue-400/5"
         },
@@ -39,7 +39,7 @@ const CuriosityLab = () => {
         {
             icon: Ghost,
             title: "What if the contract locks itself?",
-            subtitle: "Category: Deterministic Failure",
+            subtitle: "Category: System Failure",
             description: "A supply chain bot refuses to release payment because the cargo moved 0.001mm outside the 'thermal invariant' for one second. The assets are now in a digital vault without a key.",
             color: "text-red-400",
             bg: "bg-red-400/5"
@@ -58,13 +58,13 @@ const CuriosityLab = () => {
         <section className="py-32 bg-[#02020a] relative overflow-hidden">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col items-center text-center mb-24">
-                    <Badge className="bg-white/5 text-white/50 border-white/10 px-4 py-1.5 text-[9px] font-black uppercase tracking-[0.4em] mb-8">Case File: Inevitable Intercepts</Badge>
+                    <Badge className="bg-white/5 text-white/50 border-white/10 px-4 py-1.5 text-[9px] font-black uppercase tracking-[0.4em] mb-8">Case Studies: AI Risks</Badge>
                     <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase italic text-white/90 mb-8 max-w-4xl">
                         CURIOUS ABOUT THE <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600 font-display italic">UNINTENDED.</span>
                     </h2>
                     <p className="text-white/20 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
-                        AI failures are no longer probabilistic bugs; they are structural risks. Explore the technical edge of deterministic failure.
+                        AI failures require careful consideration. Explore potential risk scenarios and understand the importance of proper governance.
                     </p>
                 </div>
 
@@ -93,12 +93,12 @@ const CuriosityLab = () => {
                 <div className="flex justify-center">
                     <div className="p-8 bg-[#0d0d15] border border-white/5 rounded-[40px] text-center max-w-3xl w-full relative group cursor-pointer overflow-hidden">
                         <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20 mb-4 italic">Vision: Global Intelligence Dominance</p>
+                        <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20 mb-4 italic">Vision: Responsible AI Future</p>
                         <h4 className="text-xl md:text-2xl font-black tracking-tight text-white mb-6">
-                            Want to explore all 23 High-Potential Research Scenarios?
+                            Interested in learning more about AI risk scenarios?
                         </h4>
                         <p className="text-sm text-white/40 mb-8 leading-relaxed max-w-xl mx-auto">
-                            Our "Ghost-Core" research lab tracks and neutralizes these vectors before they become market-wide failures.
+                            Our research team studies these scenarios to help organizations build safer AI systems.
                         </p>
                         <div className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black rounded-xl text-[11px] font-black uppercase tracking-widest hover:bg-blue-600 hover:text-white transition-all shadow-xl shadow-white/5">
                             Access Full Research Vault

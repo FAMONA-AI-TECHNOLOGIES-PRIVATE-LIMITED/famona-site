@@ -2,10 +2,10 @@ import { Shield, Globe, Lock, Cpu, Activity } from 'lucide-react';
 
 const UnifiedArchitecture = () => {
     const layers = [
-        { title: "Sovereignty Layer", icon: Globe, color: "text-blue-400", nodes: 1 },
+        { title: "Policy Layer", icon: Globe, color: "text-blue-400", nodes: 1 },
         { title: "Governance Layer", icon: Shield, color: "text-emerald-400", nodes: 3 },
-        { title: "Interception Layer", icon: Lock, color: "text-amber-400", nodes: 5 },
-        { title: "Substrate Layer", icon: Cpu, color: "text-indigo-400", nodes: 7 }
+        { title: "Compliance Layer", icon: Lock, color: "text-amber-400", nodes: 5 },
+        { title: "Foundation Layer", icon: Cpu, color: "text-indigo-400", nodes: 7 }
     ];
 
     return (
@@ -16,11 +16,11 @@ const UnifiedArchitecture = () => {
             <div className="container mx-auto px-6 relative z-10">
                 <div className="text-center mb-24">
                     <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 uppercase italic italic">
-                        UNIFIED FIELD<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">HONEYCOMB ONTOLOGY</span>
+                        AI ETHICS<br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">FRAMEWORK</span>
                     </h2>
                     <p className="text-white/30 text-lg max-w-2xl mx-auto font-light leading-relaxed">
-                        A hierarchical deterministic structure where every node is a cryptographic invariant. The geometry of absolute alignment.
+                        A comprehensive approach to responsible AI development and deployment. Building trust through transparent governance.
                     </p>
                 </div>
 
@@ -54,10 +54,10 @@ const UnifiedArchitecture = () => {
                 {/* Legend */}
                 <div className="mt-24 grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
                     {[
-                        { label: "Predictable Pathing", color: "bg-blue-500" },
-                        { label: "Immune Response", color: "bg-emerald-500" },
-                        { label: "Silent Interception", color: "bg-amber-500" },
-                        { label: "Hardware Zero-Trust", color: "bg-indigo-500" }
+                        { label: "Risk Assessment", color: "bg-blue-500" },
+                        { label: "Bias Detection", color: "bg-emerald-500" },
+                        { label: "Safety Monitoring", color: "bg-amber-500" },
+                        { label: "Audit Trail", color: "bg-indigo-500" }
                     ].map((item, i) => (
                         <div key={i} className="flex items-center gap-3 p-4 bg-white/5 border border-white/5 rounded-xl">
                             <div className={`w-2 h-2 rounded-full ${item.color}`} />

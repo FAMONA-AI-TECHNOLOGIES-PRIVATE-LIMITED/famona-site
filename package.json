@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@azure/static-web-apps-cli": "^2.0.7",
     "@hookform/resolvers": "^5.2.2",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-aspect-ratio": "^1.1.8",
@@ -68,9 +67,6 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^15.14.0",
-    "html-inline": "^1.2.0",
-    "parcel": "^2.16.3",
-    "parcel-resolver-tspaths": "^0.0.9",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7",

@@ -6,19 +6,19 @@ const ResearchNexus = () => {
         {
             title: "NIST AI Risk Management Framework",
             org: "NIST (Public Domain)",
-            desc: "Foundational technical standards for managing AI risks. Integrated into our proprietary interceptor logic.",
+            desc: "Foundational technical standards for managing AI risks and building trustworthy AI systems.",
             link: "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
             title: "OECD AI Principles",
             org: "OECD (Open License)",
-            desc: "Global policy benchmarks for trustworthy AI. Core to our human-alignment stewardship.",
+            desc: "Global policy benchmarks for trustworthy and responsible AI development.",
             link: "https://oecd.ai/en/ai-principles"
         },
         {
             title: "UNESCO Recommendation on AI Ethics",
             org: "UNESCO (Open Access)",
-            desc: "The first global standard-setting instrument on the ethics of AI, used for our bias mitigation probes.",
+            desc: "The first global standard-setting instrument on the ethics of artificial intelligence.",
             link: "https://en.unesco.org/artificial-intelligence/ethics"
         }
     ];
@@ -31,7 +31,7 @@ const ResearchNexus = () => {
                     <div className="lg:col-span-5 space-y-8">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-4">
                             <Landmark className="w-3 h-3 text-blue-400" />
-                            <span className="text-[9px] font-black uppercase tracking-widest text-blue-400">DPIIT Status: Preliminary Submission</span>
+                            <span className="text-[9px] font-black uppercase tracking-widest text-blue-400">Registered Company</span>
                         </div>
 
                         <h2 className="text-4xl font-black tracking-tighter uppercase italic italic">
@@ -49,28 +49,13 @@ const ResearchNexus = () => {
                             </div>
 
                             <div className="p-6 bg-white/5 border border-white/5 rounded-2xl relative overflow-hidden">
-                                <div className="text-[10px] font-black uppercase tracking-widest text-white/20 mb-3">Startup Entity Details</div>
+                                <div className="text-[10px] font-black uppercase tracking-widest text-white/20 mb-3">About Us</div>
                                 <div className="space-y-2 text-sm">
-                                    <div className="flex justify-between border-b border-white/5 pb-2">
-                                        <span className="text-white/30">CIN</span>
-                                        <span className="text-white font-mono uppercase">U62011GJ2026PTC171802</span>
-                                    </div>
-                                    <div className="flex justify-between border-b border-white/5 pb-2">
-                                        <span className="text-white/30">Incorporation</span>
-                                        <span className="text-white">Jan 07, 2026</span>
-                                    </div>
-                                    <div className="flex justify-between border-b border-white/5 pb-2">
-                                        <span className="text-white/30">Innovation Sector</span>
-                                        <span className="text-blue-400 font-bold">Ethical AI & GOS</span>
-                                    </div>
-                                    <div className="pt-4 mt-4 border-t border-white/10">
-                                        <div className="text-[9px] font-black uppercase tracking-widest text-white/20 mb-3">Registered Office</div>
-                                        <p className="text-[11px] text-white/40 leading-relaxed font-light">
-                                            71/4 Santoshi Vasahat, Subjail Road, Mohmedpura, Bharuch, Gujarat, India, 392001
-                                        </p>
-                                    </div>
+                                    <p className="text-white/40 leading-relaxed">
+                                        FAMONA AI Technologies is a registered private limited company focused on AI ethics research and responsible AI solutions.
+                                    </p>
                                     <div className="pt-4 mt-4 border-t border-white/10 flex justify-between items-center">
-                                        <div className="text-[9px] font-black uppercase tracking-widest text-white/20">Statutory Inquiry</div>
+                                        <div className="text-[9px] font-black uppercase tracking-widest text-white/20">Contact</div>
                                         <div className="text-[10px] text-blue-400 font-bold">contact@famona.ai</div>
                                     </div>
                                 </div>

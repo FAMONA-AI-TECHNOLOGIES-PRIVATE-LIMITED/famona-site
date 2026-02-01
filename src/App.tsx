@@ -58,7 +58,7 @@ const FamonaVision = () => {
             </div>
             <div className="flex flex-col leading-none">
               <span className="text-2xl font-black tracking-tighter font-display uppercase italic text-white/90">FAMONA <span className="text-blue-500">AI</span></span>
-              <span className="text-[7px] font-mono tracking-[0.4em] text-white/30 uppercase mt-1.5 font-bold">Regulatory Interception Substrate</span>
+              <span className="text-[7px] font-mono tracking-[0.4em] text-white/30 uppercase mt-1.5 font-bold">Advancing Global AI Ethics</span>
             </div>
           </div>
 
@@ -90,7 +90,7 @@ const FamonaVision = () => {
           <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
             <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-white/5 bg-white/5 backdrop-blur-md mb-12 animate-in fade-in slide-in-from-top-12 duration-1000">
               <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse shadow-[0_0_8px_rgba(59,130,246,0.8)]" />
-              <span className="text-[9px] font-black uppercase tracking-[0.4em] text-white/50">DPIIT ALIGNMENT PHASE // v4.2.0_HUB</span>
+              <span className="text-[9px] font-black uppercase tracking-[0.4em] text-white/50">AI Ethics Research Initiative</span>
             </div>
 
             <h1 className="text-6xl md:text-8xl lg:text-[130px] font-black tracking-tighter leading-[0.75] font-display mb-12 animate-in fade-in slide-in-from-bottom-12 duration-1000">
@@ -99,7 +99,7 @@ const FamonaVision = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-white/30 max-w-2xl leading-relaxed font-light mb-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-              The inevitable substrate of global intelligence. Anchoring probabilistic AI in <span className="text-blue-400 italic font-medium">Deterministic Governance</span> through our proprietary system protocol. Research-first, global dominance focus.
+              Dedicated to the research and implementation of ethical AI frameworks and human-aligned intelligence systems.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-6 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
@@ -144,23 +144,23 @@ const FamonaVision = () => {
         <section id="research">
           <ResearchNexus />
         </section>
-      </main>
+      </main >
 
       {/* Footer */}
-      <footer className="bg-[#02020a] border-t border-white/5 pt-24 pb-12 relative z-10">
+      < footer className="bg-[#02020a] border-t border-white/5 pt-24 pb-12 relative z-10" >
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
             <div className="space-y-8">
               <div className="flex items-center gap-3">
                 <img
-                  src="file:///C:/Users/AQEEL23/.gemini/antigravity/brain/1d5d7cb5-5654-4985-839c-f12086e56cbb/uploaded_media_1769730810224.jpg"
+                  src="/logo-shield.png"
                   alt="Famona AI Shield"
                   className="w-10 h-10 object-contain"
                 />
                 <span className="text-xl font-black tracking-tighter font-display uppercase italic text-white/90">FAMONA <span className="text-blue-500">AI</span></span>
               </div>
               <p className="text-sm text-white/20 leading-relaxed font-light">
-                Investigating the substrate of sovereign intelligence. Global research leaders in deterministic, human-aligned governance architectures. Powered by <span className="text-blue-500 font-bold italic">Agentic AI</span> for high-fidelity data extraction and autonomous research telemetry.
+                Building ethical AI frameworks for a responsible future. Research-driven innovation in human-aligned intelligence systems.
               </p>
               <div className="flex items-center gap-6 text-white/10">
                 <a href="https://twitter.com/famona_ai" target="_blank" rel="noopener noreferrer">
@@ -179,37 +179,36 @@ const FamonaVision = () => {
             </div>
 
             <div>
-              <h4 className="text-[9px] font-black uppercase tracking-[0.3em] mb-10 text-white/20">Research Pillars</h4>
+              <h4 className="text-[9px] font-black uppercase tracking-[0.3em] mb-10 text-white/20">Focus Areas</h4>
               <ul className="space-y-4 text-[10px] font-bold uppercase tracking-widest text-white/20">
-                <li className="hover:text-blue-400 cursor-pointer transition-colors">Neural Substrate</li>
-                <li className="hover:text-blue-400 cursor-pointer transition-colors">Edge Fabrics</li>
-                <li className="hover:text-blue-400 cursor-pointer transition-colors">Safety Logic</li>
-                <li className="hover:text-blue-400 cursor-pointer transition-colors">Invariant Mapping</li>
+                <li className="hover:text-blue-400 cursor-pointer transition-colors">AI Safety</li>
+                <li className="hover:text-blue-400 cursor-pointer transition-colors">Ethics Research</li>
+                <li className="hover:text-blue-400 cursor-pointer transition-colors">Compliance</li>
+                <li className="hover:text-blue-400 cursor-pointer transition-colors">Best Practices</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-[9px] font-black uppercase tracking-[0.3em] mb-10 text-white/20">Governance Lab</h4>
+              <h4 className="text-[9px] font-black uppercase tracking-[0.3em] mb-10 text-white/20">Resources</h4>
               <ul className="space-y-4 text-[10px] font-bold uppercase tracking-widest text-white/20">
-                <li className="hover:text-blue-400 cursor-pointer transition-colors">Ethics Probes</li>
-                <li className="hover:text-blue-400 cursor-pointer transition-colors">Statutory Audit</li>
-                <li className="hover:text-blue-400 cursor-pointer transition-colors">Transparency</li>
-                <li className="hover:text-blue-400 cursor-pointer transition-colors">Legal Substrate</li>
+                <li className="hover:text-blue-400 cursor-pointer transition-colors">Documentation</li>
+                <li className="hover:text-blue-400 cursor-pointer transition-colors">Publications</li>
+                <li className="hover:text-blue-400 cursor-pointer transition-colors">Contact</li>
+                <li className="hover:text-blue-400 cursor-pointer transition-colors">Careers</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-[9px] font-black uppercase tracking-[0.3em] mb-10 text-white/20">Entity Verification</h4>
+              <h4 className="text-[9px] font-black uppercase tracking-[0.3em] mb-10 text-white/20">Contact</h4>
               <div className="space-y-4 text-[11px] font-medium text-white/40 leading-relaxed">
-                <p className="text-white/20 font-black uppercase tracking-widest text-[8px]">Registered Office</p>
-                <p>71/4 Santoshi Vasahat, Subjail Road, Mohmedpura, Bharuch, Gujarat, India, 392001</p>
+                <p className="text-white/20 font-black uppercase tracking-widest text-[8px]">Get in Touch</p>
+                <p>For inquiries about our AI ethics research and initiatives.</p>
                 <div className="pt-4 border-t border-white/5 space-y-2">
-                  <p className="flex justify-between"><span>CIN</span><span className="text-white">U62011GJ2026PTC171802</span></p>
                   <p className="flex justify-between"><span>Email</span><span className="text-blue-400">contact@famona.ai</span></p>
                 </div>
                 <p className="text-emerald-500/50 flex items-center gap-2 pt-2">
                   <ShieldCheck className="w-3 h-3" />
-                  DPIIT Alignment Verified
+                  Registered Company
                 </p>
               </div>
             </div>
@@ -226,9 +225,9 @@ const FamonaVision = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer >
       <GhostChat />
-    </div>
+    </div >
   );
 };
 

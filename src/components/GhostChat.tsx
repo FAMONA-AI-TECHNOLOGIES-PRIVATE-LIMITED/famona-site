@@ -7,7 +7,7 @@ import { logInquiry } from "../lib/InquiryService";
 const GhostChat = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<{ role: 'bot' | 'user', content: string }[]>([
-        { role: 'bot', content: "SYSTEM: GHOST_AGENT_LOGIC initialized. How can I assist with your statutory inquiry?" }
+        { role: 'bot', content: "SYSTEM: AI Assistant initialized. How can I help you today?" }
     ]);
     const [input, setInput] = useState("");
     const [isTyping, setIsTyping] = useState(false);
@@ -34,15 +34,15 @@ const GhostChat = () => {
         setInput("");
         setIsTyping(true);
 
-        // Simulate Agentic AI Response
+        // Simulate AI Response
         setTimeout(() => {
-            let response = "AGENT: Inquiry received. Routing to deterministic substrate for analysis.";
+            let response = "Thank you for your inquiry. Our team will review and respond.";
             if (userMsg.toLowerCase().includes("email") || userMsg.toLowerCase().includes("contact")) {
-                response = "AGENT: Statutory contact protocol active. Direct inquiries to contact@famona.ai. Agentic extraction in progress.";
+                response = "For inquiries, please contact us at contact@famona.ai.";
             } else if (userMsg.toLowerCase().includes("cin") || userMsg.toLowerCase().includes("legal")) {
-                response = "AGENT: Entity U62011GJ2026PTC171802 verified. All protocols strictly aligned with DPDP 2023.";
+                response = "FAMONA AI Technologies is a registered private limited company. For legal inquiries, please contact us directly.";
             } else if (userMsg.toLowerCase().includes("who")) {
-                response = "AGENT: We are the substrate of global intelligence governance. Developed & Powered by Famona AI Private Limited.";
+                response = "We are FAMONA AI Technologies, focused on ethical AI research and responsible AI solutions.";
             }
 
             setMessages(prev => [...prev, { role: 'bot', content: response }]);
@@ -70,7 +70,7 @@ const GhostChat = () => {
                     <div className="p-4 bg-white/5 border-b border-white/5 flex items-center justify-between">
                         <div className="flex items-center gap-2">
                             <Terminal className="w-4 h-4 text-blue-400" />
-                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/50">GHOST_AGENT_v1.0</span>
+                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/50">AI_ASSISTANT</span>
                         </div>
                         <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="h-8 w-8 text-white/20 hover:text-white">
                             <X className="w-4 h-4" />

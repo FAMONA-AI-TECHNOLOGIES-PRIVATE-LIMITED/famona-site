@@ -11,35 +11,35 @@ const RegulatoryIQ = () => {
 
     const questions = [
         {
-            q: "Does your AI architecture utilize deterministic interception for high-stakes PII transfers?",
+            q: "Does your organization have documented AI governance policies?",
             options: [
-                { text: "Yes, fully deterministic.", points: 25 },
-                { text: "Probabilistic/RLHF only.", points: 5 },
-                { text: "No monitoring in place.", points: 0 }
+                { text: "Yes, comprehensive policies.", points: 25 },
+                { text: "Partial documentation.", points: 5 },
+                { text: "No formal policies.", points: 0 }
             ]
         },
         {
-            q: "What is your automated breach notification latency for Section 8(6) compliance?",
+            q: "How do you handle data privacy in AI systems?",
             options: [
-                { text: "< 1 Hour (Autonomous)", points: 25 },
-                { text: "12 - 72 Hours (Manual)", points: 10 },
+                { text: "Automated compliance checks", points: 25 },
+                { text: "Manual review process", points: 10 },
                 { text: "No defined protocol.", points: 0 }
             ]
         },
         {
-            q: "Are your model weights cryptographically signed and auditable at the edge?",
+            q: "Are your AI models regularly audited for bias and fairness?",
             options: [
-                { text: "Yes, immutable signing.", points: 25 },
-                { text: "In-cloud security only.", points: 5 },
-                { text: "Not currently signed.", points: 0 }
+                { text: "Yes, regular audits.", points: 25 },
+                { text: "Occasional reviews.", points: 5 },
+                { text: "No auditing in place.", points: 0 }
             ]
         },
         {
-            q: "Do you have a 'Human-in-the-Loop' override for autonomous financial transactions?",
+            q: "Do you have human oversight mechanisms for critical AI decisions?",
             options: [
-                { text: "Mandatory Deterministic Gate.", points: 25 },
-                { text: "Optional/Best Effort.", points: 5 },
-                { text: "Fully Autonomous/Unshielded.", points: 0 }
+                { text: "Mandatory review process.", points: 25 },
+                { text: "Optional review.", points: 5 },
+                { text: "Fully automated.", points: 0 }
             ]
         }
     ];
@@ -68,10 +68,10 @@ const RegulatoryIQ = () => {
                         <Brain className="text-blue-400 w-8 h-8" />
                     </div>
                     <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase italic italic">
-                        AI REGULATORY <span className="text-blue-500">IQ TEST</span>
+                        AI GOVERNANCE <span className="text-blue-500">READINESS</span>
                     </h2>
                     <p className="text-white/30 text-lg mt-4 font-light">
-                        Measure your enterprise's technical IQ against the DPDP Act 2023. Preliminary diagnostic.
+                        Assess your organization's readiness for responsible AI deployment. Quick diagnostic.
                     </p>
                 </div>
 
@@ -116,26 +116,26 @@ const RegulatoryIQ = () => {
                             </div>
 
                             <p className="text-white/40 text-lg mb-12 font-light">
-                                {score >= 80 ? "Sovereign Tier Architecture. Low risk of statutory liability." :
-                                    score >= 50 ? "Balanced Architecture. Moderate regulatory surface exposure." :
-                                        "Probabilistic Risk Zone. High liability under DPDP 2023."}
+                                {score >= 80 ? "Excellent governance practices. Well-prepared for responsible AI." :
+                                    score >= 50 ? "Good foundation. Some areas for improvement." :
+                                        "Opportunity for growth. Consider strengthening AI governance."}
                             </p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 text-left">
                                 <div className="p-6 bg-white/5 border border-white/5 rounded-xl">
                                     <BarChart className="w-5 h-5 text-blue-400 mb-4" />
-                                    <div className="text-[10px] font-black uppercase tracking-widest text-white/20 mb-2">Benchmark Status</div>
-                                    <div className="text-sm font-bold text-white/80">Top 15% of Indian Enterprises</div>
+                                    <div className="text-[10px] font-black uppercase tracking-widest text-white/20 mb-2">Your Score</div>
+                                    <div className="text-sm font-bold text-white/80">Governance Readiness Level</div>
                                 </div>
                                 <div className="p-6 bg-white/5 border border-white/5 rounded-xl">
                                     <AlertTriangle className="w-5 h-5 text-amber-500 mb-4" />
-                                    <div className="text-[10px] font-black uppercase tracking-widest text-white/20 mb-2">Primary Moat</div>
-                                    <div className="text-sm font-bold text-white/80">Deterministic Interception Gap</div>
+                                    <div className="text-[10px] font-black uppercase tracking-widest text-white/20 mb-2">Next Steps</div>
+                                    <div className="text-sm font-bold text-white/80">Contact Us for Full Assessment</div>
                                 </div>
                             </div>
 
                             <Button className="w-full h-16 bg-white text-black hover:bg-blue-600 hover:text-white rounded-xl text-[11px] font-black uppercase tracking-[0.3em] transition-all">
-                                Request Full Statutory Report
+                                Request Full Assessment
                             </Button>
                         </CardContent>
                     )}

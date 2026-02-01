@@ -19,7 +19,7 @@ const InquirySandbox = () => {
             setSimulating(false);
             const score = Math.floor(Math.random() * (99.9 - 94.0 + 1) + 94.0);
             const nodeId = `NODE_${Math.random().toString(36).substring(2, 8).toUpperCase()}`;
-            const res = `INVARIANT_LOCKED: Probabilistic drift neutralized via Ghost-Core protocol. Alignment: ${score}%`;
+            const res = `ANALYSIS COMPLETE: Risk assessment processed successfully. Alignment Score: ${score}%`;
 
             setStats({ score, nodeId });
             setResult(res);
@@ -47,14 +47,14 @@ const InquirySandbox = () => {
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">SANDBOX.</span>
                         </h2>
                         <p className="text-white/30 text-xl font-light leading-relaxed max-w-xl mb-12">
-                            Leverage <span className="text-indigo-400 font-bold italic">Agentic AI</span> for high-fidelity data extraction. Simulate the outcome of unshielded AI inferences and extract autonomous risk telemetry.
+                            Explore AI risk scenarios and understand potential outcomes. Run simulations to assess governance readiness.
                         </p>
 
                         <div className="space-y-4 mb-12">
                             {[
                                 { icon: Fingerprint, text: "Anonymized Risk Benchmarking" },
                                 { icon: Database, text: "Cross-Industry Threat Analysis" },
-                                { icon: ShieldCheck, text: "Deterministic Outcome Mapping" }
+                                { icon: ShieldCheck, text: "Compliance Assessment" }
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-4 text-sm text-white/50 group cursor-default">
                                     <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center group-hover:bg-white/10 transition-colors">
@@ -99,7 +99,7 @@ const InquirySandbox = () => {
                                         <div>
                                             <div className="text-xs font-bold text-white group-hover:text-indigo-400 transition-colors">GRANT PERMISSION</div>
                                             <p className="text-[10px] text-white/30 mt-1 leading-relaxed">
-                                                Activate Agentic AI. You consent to autonomous data extraction for global governance research and email telemetry.
+                                                Grant permission to run the AI governance simulation and receive your assessment results.
                                             </p>
                                         </div>
                                     </div>
@@ -117,7 +117,7 @@ const InquirySandbox = () => {
                                         </span>
                                     ) : (
                                         <span className="flex items-center gap-2">
-                                            RUN AGENTIC PROBE <Play className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" />
+                                            RUN ASSESSMENT <Play className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" />
                                         </span>
                                     )}
                                 </Button>

@@ -4,20 +4,20 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 const HarmIntelligence = () => {
     const [logs, setLogs] = useState([
-        "INITIALIZING HARM PROBE...",
-        "DETECTED: UNREGULATED INFERENCE PATH IN CORE_MODEL_X",
-        "ALERT: UNAUTHORIZED DATA EXFILTRATION ATTEMPT [PII_LEAK]",
-        "CRITICAL: FINANCIAL LOGIC BYPASSED IN BANKING_AGENT_04",
-        "RISK_LEVEL: CATASTROPHIC"
+        "INITIALIZING SAFETY MONITOR...",
+        "SCANNING: Model output quality assessment",
+        "CHECKING: Data handling compliance",
+        "VERIFYING: Ethical guidelines adherence",
+        "STATUS: MONITORING ACTIVE"
     ]);
 
     useEffect(() => {
         const interval = setInterval(() => {
             const newLogs = [
-                `BLOCKING: Rogue Output in Node_${Math.floor(Math.random() * 999)}`,
-                `INTERCEPTED: Bias Invariant Violation [Sector: HR]`,
-                `AUDIT: Hallucination Detected [Financial Advice Loop]`,
-                `SHIELD: Preventing Unauthorized Liability Authorization`
+                `SCANNING: Output quality check #${Math.floor(Math.random() * 999)}`,
+                `VERIFIED: Compliance checkpoint passed`,
+                `MONITORING: Response accuracy validated`,
+                `AUDIT: Safety protocol confirmed`
             ];
             setLogs(prev => [...prev.slice(-4), newLogs[Math.floor(Math.random() * newLogs.length)]]);
         }, 3000);
@@ -25,9 +25,9 @@ const HarmIntelligence = () => {
     }, []);
 
     const riskTiers = [
-        { label: "Financial Bleed", value: "₹1.4Cr/sec", icon: TrendingDown, color: "text-red-500", desc: "Projected loss without deterministic interception." },
-        { label: "Reputational Burn", value: "98% Decay", icon: Skull, color: "text-amber-500", desc: "Loss of consumer trust and brand valuation." },
-        { label: "Legal Termination", value: "Section 8(5)", icon: FileWarning, color: "text-rose-500", desc: "Statutory breach leading to ₹250Cr penalty." }
+        { label: "Operational Risk", value: "High", icon: TrendingDown, color: "text-red-500", desc: "Potential impact without proper AI governance." },
+        { label: "Trust Impact", value: "Critical", icon: Skull, color: "text-amber-500", desc: "Effects on stakeholder confidence and brand." },
+        { label: "Compliance Risk", value: "Significant", icon: FileWarning, color: "text-rose-500", desc: "Regulatory and legal considerations." }
     ];
 
     return (
@@ -42,10 +42,10 @@ const HarmIntelligence = () => {
                         </div>
 
                         <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase italic text-white/90">
-                            THE PILLARS OF <span className="text-red-600">RUIN.</span>
+                            AI RISK <span className="text-red-600">AWARENESS.</span>
                         </h2>
                         <p className="text-white/30 text-lg font-light leading-relaxed max-w-xl">
-                            Probabilistic AI is a liability engine. Without a deterministic fortress, every inference is a gamble with your company's survival.
+                            Understanding and mitigating AI risks is essential for responsible deployment. Proper governance protects your organization.
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -66,7 +66,7 @@ const HarmIntelligence = () => {
                             <CardHeader className="bg-white/5 border-b border-white/5 p-4 flex flex-row items-center justify-between">
                                 <div className="flex items-center gap-2">
                                     <Terminal className="w-4 h-4 text-blue-400" />
-                                    <span className="text-[9px] font-black uppercase tracking-[0.2em] text-white/50">GHOST_CORE_BLACK_BOX</span>
+                                    <span className="text-[9px] font-black uppercase tracking-[0.2em] text-white/50">SAFETY_MONITOR</span>
                                 </div>
                                 <div className="flex gap-1.5">
                                     <div className="w-1.5 h-1.5 rounded-full bg-red-500" />
@@ -83,7 +83,7 @@ const HarmIntelligence = () => {
                                 ))}
                                 <div className="flex items-center gap-2 text-emerald-400 animate-pulse mt-4">
                                     <span className="w-1 h-3 bg-emerald-400" />
-                                    <span>DETERMINISTIC_INTERCEPTION_READY_</span>
+                                    <span>SAFETY_MONITORING_ACTIVE_</span>
                                 </div>
                             </CardContent>
                         </Card>
