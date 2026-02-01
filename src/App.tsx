@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import {
-  ShieldCheck,
   Search,
   ArrowRight,
   Github,
@@ -189,26 +188,23 @@ const FamonaVision = () => {
             </div>
 
             <div>
-              <h4 className="text-[9px] font-black uppercase tracking-[0.3em] mb-10 text-white/20">Resources</h4>
+              <h4 className="text-[9px] font-black uppercase tracking-[0.3em] mb-10 text-white/20">Open Resources</h4>
               <ul className="space-y-4 text-[10px] font-bold uppercase tracking-widest text-white/20">
-                <li className="hover:text-blue-400 cursor-pointer transition-colors">Documentation</li>
-                <li className="hover:text-blue-400 cursor-pointer transition-colors">Publications</li>
-                <li className="hover:text-blue-400 cursor-pointer transition-colors">Contact</li>
-                <li className="hover:text-blue-400 cursor-pointer transition-colors">Careers</li>
+                <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener" className="hover:text-blue-400 transition-colors">NIST AI RMF</a></li>
+                <li><a href="https://oecd.ai/en/ai-principles" target="_blank" rel="noopener" className="hover:text-blue-400 transition-colors">OECD AI Principles</a></li>
+                <li><a href="https://www.unesco.org/en/artificial-intelligence/recommendation-ethics" target="_blank" rel="noopener" className="hover:text-blue-400 transition-colors">UNESCO AI Ethics</a></li>
+                <li><a href="https://aiindex.stanford.edu" target="_blank" rel="noopener" className="hover:text-blue-400 transition-colors">Stanford HAI Index</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-[9px] font-black uppercase tracking-[0.3em] mb-10 text-white/20">Contact</h4>
-              <div className="space-y-4 text-[11px] font-medium text-white/40 leading-relaxed">
-                <p className="text-white/20 font-black uppercase tracking-widest text-[8px]">Get in Touch</p>
-                <p>For inquiries about our AI ethics research and initiatives.</p>
-                <div className="pt-4 border-t border-white/5 space-y-2">
-                  <p className="flex justify-between"><span>Email</span><span className="text-blue-400">contact@famona.ai</span></p>
-                </div>
-                <p className="text-emerald-500/50 flex items-center gap-2 pt-2">
-                  <ShieldCheck className="w-3 h-3" />
-                  Registered Company
+              <h4 className="text-[9px] font-black uppercase tracking-[0.3em] mb-10 text-white/20">Statutory Info</h4>
+              <div className="space-y-3 text-[10px] text-white/30 leading-relaxed">
+                <p><span className="text-white/50">CIN:</span> U62011GJ2026PTC171802</p>
+                <p><span className="text-white/50">Email:</span> <span className="text-blue-400">contact@famona.ai</span></p>
+                <p><span className="text-white/50">Contact:</span> Director</p>
+                <p className="text-[9px] text-white/20 pt-2 border-t border-white/5">
+                  Regd. Office: 71/4 Santoshi Vasahat,<br />Subjail Road, Bharuch, Gujarat 392001
                 </p>
               </div>
             </div>
@@ -216,12 +212,12 @@ const FamonaVision = () => {
 
           <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 gap-6">
             <div className="flex flex-col items-center md:items-start">
-              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/10 mb-2">© 2026 Famona AI Technologies Pvt Ltd. Precise. Deterministic. Unavoidable.</span>
-              <span className="text-[11px] font-black uppercase tracking-[0.2em] text-blue-500/60 italic">THIS WEBSITE IS DEVELOPED AND POWERED BY FAMONA AI PRIVATE LIMITED.</span>
+              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/10 mb-2">© 2026 FAMONA AI TECHNOLOGIES PRIVATE LIMITED</span>
+              <span className="text-[9px] text-white/20">All Rights Reserved</span>
             </div>
             <div className="flex gap-8 text-[9px] font-black uppercase tracking-widest text-white/20">
-              <span className="hover:text-white cursor-pointer transition-colors">Statutory Disclosures</span>
-              <span className="hover:text-white cursor-pointer transition-colors">Privacy Invariants</span>
+              <span className="hover:text-white cursor-pointer transition-colors">Privacy Policy</span>
+              <span className="hover:text-white cursor-pointer transition-colors">Terms</span>
             </div>
           </div>
         </div>

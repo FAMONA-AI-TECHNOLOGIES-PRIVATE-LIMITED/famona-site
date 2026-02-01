@@ -11,7 +11,7 @@ const ResearchNexus = () => {
         },
         {
             title: "OECD AI Principles",
-            org: "OECD (Open License)",
+            org: "OECD (Open Access)",
             desc: "Global policy benchmarks for trustworthy and responsible AI development.",
             link: "https://oecd.ai/en/ai-principles"
         },
@@ -20,6 +20,18 @@ const ResearchNexus = () => {
             org: "UNESCO (Open Access)",
             desc: "The first global standard-setting instrument on the ethics of artificial intelligence.",
             link: "https://en.unesco.org/artificial-intelligence/ethics"
+        },
+        {
+            title: "Stanford HAI AI Index Report",
+            org: "Stanford (Open Access)",
+            desc: "Annual comprehensive report on AI trends, investment, and governance worldwide.",
+            link: "https://aiindex.stanford.edu"
+        },
+        {
+            title: "IBM AI Fairness 360",
+            org: "IBM (Apache 2.0)",
+            desc: "Open-source toolkit for detecting and mitigating bias in machine learning models.",
+            link: "https://aif360.mybluemix.net"
         }
     ];
 
