@@ -14,7 +14,8 @@ import RegulatoryIQ from './components/RegulatoryIQ';
 import CuriosityLab from './components/CuriosityLab';
 import ResearchNexus from './components/ResearchNexus';
 import InquirySandbox from './components/InquirySandbox';
-import EthicsChat from './components/EthicsChat';
+import TelemetryPulse from './components/TelemetryPulse';
+import AlignmentHub from './components/AlignmentHub';
 import SEO from './components/SEO';
 
 const FamonaVision = () => {
@@ -126,6 +127,24 @@ const FamonaVision = () => {
 
         <section id="framework">
           <EthicsFramework />
+        </section>
+
+        <section id="telemetry" className="bg-white py-24">
+          <div className="container mx-auto px-6">
+            <div className="mb-16 text-center lg:text-left">
+              <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-[#1E293B] uppercase italic mb-4">
+                TECHNICAL <span className="text-[#4F46E5]">TELEMETRY.</span>
+              </h2>
+              <p className="text-slate-400 text-lg font-light max-w-2xl">
+                Real-time mapping of synthetic governance vectors and NIST AI RMF alignment diagnostics.
+              </p>
+            </div>
+            <TelemetryPulse />
+          </div>
+        </section>
+
+        <section id="alignment">
+          <AlignmentHub />
         </section>
 
         <section id="risks">

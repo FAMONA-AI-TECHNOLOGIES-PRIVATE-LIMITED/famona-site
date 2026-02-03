@@ -23,3 +23,17 @@ This document defines the visual language for the Famona Premium Vision project.
   - Small: 0 1px 2px 0 rgba(0, 0, 0, 0.05)
   - Medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1)
 - **Buttons**: 12px vertical / 24px horizontal padding, bold text.
+
+## Premium Effects (Glassmorphism)
+- **Glass Background**: rgba(255, 255, 255, 0.7)
+- **Glass Blur**: 12px (backdrop-filter)
+- **Glass Border**: 1px solid rgba(255, 255, 255, 0.3)
+
+## Motion Tokens
+- **Transition**: 200ms ease-in-out (Standard), 500ms cubic-bezier(0.4, 0, 0.2, 1) (Hero/Entrance)
+
+## Data Visualization (Telemetry)
+- **Chart-Primary**: #4F46E5 (Indigo)
+- **Chart-Secondary**: #10B981 (Emerald)
+- **Chart-Grid**: rgba(100, 116, 139, 0.1) (Slate Light)
+- **Telemetry-Glow**: 0 0 15px rgba(79, 70, 229, 0.4)
