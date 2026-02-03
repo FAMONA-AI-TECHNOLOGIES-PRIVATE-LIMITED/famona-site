@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "--- Product Privacy & Security Audit ---"
+echo "[AUDIT] Initiating Famona AI Security & Compliance Scan..."
 
 # 1. Public Directory Exposure Check
 echo "Auditing public/ directory for sensitive files..."
@@ -10,9 +10,9 @@ if [ -d "public" ]; then
     for pattern in "${SENSITIVE_PATTERNS[@]}"; do
         found_files=$(find public -name "$pattern" 2>/dev/null)
         if [ -n "$found_files" ]; then
-            echo "CRITICAL: Sensitive files found in public/ directory:"
+            echo "[FAILURE] Sensitive files detected in public/:"
             echo "$found_files"
-            echo "ACTION: Move these files to the root directory immediately to prevent public exposure."
+            exit 1
         fi
     done
 else
@@ -24,12 +24,11 @@ echo "Scanning src/ for hardcoded IP addresses..."
 # Searches for IPv4 patterns (e.g., 192.168.1.1)
 IP_LEAKS=$(grep -rE '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' src --exclude-dir=node_modules 2>/dev/null)
 if [ -n "$IP_LEAKS" ]; then
-    echo "WARNING: Potential IP addresses found in source code:"
+    echo "[WARNING] Potential hardcoded IP addresses found in src/:"
     echo "$IP_LEAKS"
-    echo "ACTION: Ensure these are not your personal IP or local dev server addresses."
 fi
 
-echo "Checking for IP-echo services (ipify, icanhazip, etc.)..."
+echo "Scanning for external IP-echo dependencies..."
 grep -rEi "ipify|icanhazip|ident.me|ifconfig.me" src --exclude-dir=node_modules
 
 # 2. Structure Check

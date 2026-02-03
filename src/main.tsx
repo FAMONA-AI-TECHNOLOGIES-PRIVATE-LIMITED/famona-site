@@ -21,10 +21,9 @@ class ErrorBoundary extends Component<{ children: ReactNode }, { hasError: boole
   render() {
     if (this.state.hasError) {
       return (
-        <div style={{ padding: '20px', color: 'red', fontFamily: 'monospace' }}>
-          <h1>Fatal Application Error</h1>
-          <pre>{this.state.error?.toString()}</pre>
-          <pre>{this.state.error?.stack}</pre>
+        <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyCenter: 'center', background: '#02020a', color: '#ffffff', textAlign: 'center', padding: '40px' }}>
+          <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>SYSTEM RECOVERY</h1>
+          <p style={{ color: '#64748b', marginTop: '10px' }}>The application encountered an unexpected state. Please refresh the browser to re-establish the session.</p>
         </div>
       );
     }
@@ -36,11 +35,9 @@ class ErrorBoundary extends Component<{ children: ReactNode }, { hasError: boole
 window.onerror = (message, source, lineno, colno, error) => {
   const root = document.getElementById('root');
   if (root) {
-    root.innerHTML = `<div style="padding: 20px; color: red; font-family: monospace;">
-      <h1>Global Script Error</h1>
-      <p>${message}</p>
-      <p>Source: ${source}:${lineno}:${colno}</p>
-      <pre>${error?.stack || 'No stack trace available'}</pre>
+    root.innerHTML = `<div style="height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #02020a; color: #ffffff; text-align: center;">
+      <h1 style="font-size: 1.2rem; font-weight: bold;">CONNECTION INTERRUPTED</h1>
+      <p style="color: #475569; margin-top: 10px;">A critical script error occurred. Please check your network and reload.</p>
     </div>`;
   }
 };

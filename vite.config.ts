@@ -10,6 +10,9 @@ export default defineConfig({
     minify: 'esbuild',
     reportCompressedSize: false,
   },
+  esbuild: {
+    drop: ['console', 'debugger'],
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

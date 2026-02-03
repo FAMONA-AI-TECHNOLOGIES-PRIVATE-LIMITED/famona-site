@@ -8,10 +8,10 @@ interface SEOProps {
 }
 
 const SEO = ({
-  title = "FAMONA AI | Global Leader in Responsible Intelligence",
-  description = "Building the world's most secure, human-aligned intelligence systems via the Sovereign GOS protocol.",
+  title = "FAMONA AI | Advancing Global AI Ethics",
+  description = "Institutional research and technical alignment of intelligence systems. Founded on the principle of responsible, human-centric AI development.",
   image = "/logo-shield.png",
-  url = "https://famona.ai/"
+  url = "https://famonaai.com/"
 }: SEOProps) => {
   return (
     <Helmet>
