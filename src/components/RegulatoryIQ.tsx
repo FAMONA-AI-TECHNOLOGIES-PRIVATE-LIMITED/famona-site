@@ -63,19 +63,19 @@ const RegulatoryIQ = () => {
     return (
         <section className="py-24 bg-[#02020a] relative overflow-hidden">
             <div className="container mx-auto px-6 max-w-4xl">
-                <div className="flex flex-col items-center text-center mb-16">
-                    <div className="w-16 h-16 bg-blue-500/10 border border-blue-500/20 rounded-2xl flex items-center justify-center mb-8">
-                        <Brain className="text-blue-400 w-8 h-8" />
+                <div className="flex flex-col items-center text-center mb-24">
+                    <div className="w-20 h-20 bg-blue-500/10 border border-blue-500/20 rounded-[32px] flex items-center justify-center mb-12 shadow-2xl shadow-blue-500/10 animate-float">
+                        <Brain className="text-blue-400 w-10 h-10" />
                     </div>
-                    <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase italic italic">
-                        AI GOVERNANCE <span className="text-blue-500">READINESS</span>
+                    <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic font-display">
+                        GOVERNANCE <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">READINESS.</span>
                     </h2>
-                    <p className="text-white/30 text-lg mt-4 font-light">
-                        Assess your organization's readiness for responsible AI deployment. Quick diagnostic.
+                    <p className="text-white/30 text-xl mt-6 font-light max-w-2xl leading-relaxed">
+                        Assess institutional preparedness for high-fidelity AI deployment. Execute standardized diagnostic protocol.
                     </p>
                 </div>
 
-                <Card className="bg-[#0d0d15] border-white/10 overflow-hidden shadow-2xl relative">
+                <Card className="glass-panel overflow-hidden shadow-3xl relative rounded-[40px] border-white/10 hover-glow">
                     {!showResult ? (
                         <CardContent className="p-12">
                             <div className="flex justify-between items-center mb-12">

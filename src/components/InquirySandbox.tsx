@@ -37,13 +37,13 @@ const InquirySandbox = () => {
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     <div>
-                        <Badge className="bg-blue-500/10 text-blue-400 border border-blue-500/20 px-4 py-1.5 text-[9px] font-black uppercase tracking-widest mb-8">Technical Research Lab</Badge>
-                        <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic text-white/90 mb-8 leading-[0.9]">
-                            TECH <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">LAB.</span>
+                        <Badge className="bg-blue-500/10 text-blue-400 border border-blue-500/20 px-6 py-2 text-[10px] font-black uppercase tracking-[0.4em] mb-12 shadow-2xl">Technical Research Lab</Badge>
+                        <h2 className="text-6xl md:text-8xl font-black tracking-tighter uppercase italic text-white/90 mb-10 leading-[0.85] font-display">
+                            RESEARCH <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">SANDBOX.</span>
                         </h2>
-                        <p className="text-white/30 text-xl font-light leading-relaxed max-w-xl mb-12">
-                            Validated technical probing across AI safety vectors. Execute standardized simulations to evaluate system alignment and stress limits.
+                        <p className="text-white/30 text-2xl font-light leading-relaxed max-w-xl mb-16 italic">
+                            Execute standardized technical probes across sensitive AI safety vectors. Validated alignment diagnostics.
                         </p>
 
                         <div className="space-y-4 mb-12">

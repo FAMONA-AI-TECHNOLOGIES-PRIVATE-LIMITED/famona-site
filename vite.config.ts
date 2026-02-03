@@ -9,6 +9,15 @@ export default defineConfig({
     sourcemap: false,
     minify: 'esbuild',
     reportCompressedSize: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          ui: ['@radix-ui/react-dialog', 'lucide-react'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
   },
   esbuild: {
     drop: ['console', 'debugger'],

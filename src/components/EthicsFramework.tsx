@@ -14,13 +14,13 @@ const EthicsFramework = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/5 blur-[150px] rounded-full pointer-events-none" />
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="text-center mb-24">
-                    <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 uppercase italic italic">
-                        AI ETHICS<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">FRAMEWORK</span>
+                <div className="text-center mb-32">
+                    <h2 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 uppercase italic font-display">
+                        ETHICS<br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">FRAMEWORK.</span>
                     </h2>
-                    <p className="text-white/30 text-lg max-w-2xl mx-auto font-light leading-relaxed">
-                        A comprehensive approach to responsible AI development and deployment. Building trust through transparent governance.
+                    <p className="text-white/30 text-xl max-w-2xl mx-auto font-light leading-relaxed italic">
+                        Proactive governance through technical alignment. A multi-layered substrate for human-centered intelligence.
                     </p>
                 </div>
 
