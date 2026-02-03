@@ -15,13 +15,13 @@ const EthicsChat = () => {
     const scrollRef = useRef<HTMLDivElement>(null);
 
     const KNOWLEDGE_BASE: Record<string, string> = {
-        "nist": "NIST AI RMF v1.0 specifies a process-oriented approach: Govern, Map, Measure, and Manage. We recommend using the 'Measure' phase for your current vector.",
-        "oecd": "OECD AI Principles emphasize transparency, explainability, and accountability. Your inquiry aligns with Principle 1.2: Human-centered values and fairness.",
-        "audit": "Initiating Technical Audit Protocol. We are currently analyzing training data bias and alignment drift. Status: VERIFIED.",
-        "safety": "AI Safety requires robust circuit breakers. We recommend implementing 'Deterministic Kill-Switches' at the logic layer.",
-        "framework": "The Famona Ethics Framework integrates NIST and OECD standards into a unified technical substrate for enterprise AI.",
-        "contact": "For deep technical collaboration, please reach out to our research leads at contact@famona.ai.",
-        "hello": "Hello. I am the technical audit assistant. I can help you navigate AI safety frameworks and risk mitigation strategies."
+        "nist": "NIST AI RMF v1.0 specifies a process-oriented approach: Govern, Map, Measure, and Manage.",
+        "oecd": "OECD AI Principles emphasize transparency, explainability, and accountability.",
+        "audit": "Technical Audit Protocol initiated. Analyzing system alignment vectors.",
+        "safety": "AI Safety focuses on robust guardrails and technical alignment frameworks.",
+        "framework": "The Famona Ethics Framework integrates global standards into a unified institutional approach.",
+        "contact": "For institutional collaboration inquiries, please reach out to contact@famona.ai.",
+        "hello": "Hello. I am the technical audit assistant. I can help you navigate AI safety frameworks."
     };
 
     useEffect(() => {
@@ -39,7 +39,7 @@ const EthicsChat = () => {
         setIsTyping(true);
         setReasoningLogs(["Initializing Audit Context...", "Scanning Knowledge Base..."]);
 
-        // Agentic Extraction
+        // Institutional Logging
         logInquiry({ source: 'TECH_CHAT', content: userMsg });
 
         // Simulate Reasoning/Streaming

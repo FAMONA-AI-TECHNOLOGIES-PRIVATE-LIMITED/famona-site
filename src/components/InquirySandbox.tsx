@@ -21,11 +21,11 @@ const InquirySandbox = () => {
             setResult(resultText);
             // Certificate generation disabled as per brand guidelines
 
-            // Agentic Extraction
+            // Institutional Logging
             logInquiry({
                 source: 'SANDBOX',
                 result: resultText,
-                details: { vector: "Autonomous Financial Logic Drift", alignment: score }
+                details: { vector: "Institutional Alignment Probe", alignment: score }
             });
         }, 2500);
     };
@@ -76,11 +76,10 @@ const InquirySandbox = () => {
                                 </div>
 
                                 <div className="p-6 bg-black/40 border border-white/5 rounded-2xl">
-                                    <label className="text-[9px] font-black uppercase tracking-widest text-white/30 block mb-4">Target Risk Vector</label>
                                     <select className="w-full bg-transparent text-white border-b border-white/10 pb-2 focus:outline-none focus:border-blue-500 transition-colors text-sm font-medium">
-                                        <option>Autonomous Financial Logic Drift</option>
-                                        <option>PII Inference Leakage</option>
-                                        <option>Judicial Hallucination Loop</option>
+                                        <option>Institutional Alignment Probe</option>
+                                        <option>Alignment Stress Test</option>
+                                        <option>Safety Integrity Check</option>
                                     </select>
                                 </div>
 
