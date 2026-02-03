@@ -8,13 +8,13 @@ import {
   Mail
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import EthicsFramework from './components/UnifiedArchitecture';
+import EthicsFramework from './components/EthicsFramework';
 import HarmIntelligence from './components/HarmIntelligence';
 import RegulatoryIQ from './components/RegulatoryIQ';
 import CuriosityLab from './components/CuriosityLab';
 import ResearchNexus from './components/ResearchNexus';
 import InquirySandbox from './components/InquirySandbox';
-import EthicsChat from './components/GhostChat';
+import EthicsChat from './components/EthicsChat';
 import SEO from './components/SEO';
 
 const FamonaVision = () => {
