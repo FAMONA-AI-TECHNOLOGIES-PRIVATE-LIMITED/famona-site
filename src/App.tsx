@@ -19,23 +19,16 @@ import AlignmentHub from './components/AlignmentHub';
 import SEO from './components/SEO';
 
 const FamonaVision = () => {
-  const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
+    console.log("[FAMONA_AI] Application initialization success.");
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  if (!mounted) return (
-    <div className="min-h-screen bg-white flex items-center justify-center">
-      <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" />
-    </div>
-  );
 
   return (
     <div className="min-h-screen bg-white text-slate-900 selection:bg-blue-100 font-sans antialiased overflow-x-hidden">
