@@ -41,13 +41,13 @@ const InquirySandbox = () => {
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     <div>
-                        <Badge className="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-4 py-1.5 text-[9px] font-black uppercase tracking-widest mb-8">Research Playground</Badge>
+                        <Badge className="bg-blue-500/10 text-blue-400 border border-blue-500/20 px-4 py-1.5 text-[9px] font-black uppercase tracking-widest mb-8">Technical Research Lab</Badge>
                         <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic text-white/90 mb-8 leading-[0.9]">
-                            INQUIRY <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">SANDBOX.</span>
+                            TECH <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">LAB.</span>
                         </h2>
                         <p className="text-white/30 text-xl font-light leading-relaxed max-w-xl mb-12">
-                            Explore AI risk scenarios and understand potential outcomes. Run simulations to assess governance readiness.
+                            Validated technical probing across AI safety vectors. Execute standardized simulations to evaluate system alignment and stress limits.
                         </p>
 
                         <div className="space-y-4 mb-12">
@@ -72,10 +72,10 @@ const InquirySandbox = () => {
 
                             <div className="space-y-6 relative z-20">
                                 <div className="text-[10px] font-black uppercase tracking-[0.3em] text-white/20 mb-4 flex justify-between">
-                                    <span>Simulator Status: Idle</span>
+                                    <span>System Status: Standby</span>
                                     <span className="flex gap-1">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
-                                        <div className="w-1.5 h-1.5 rounded-full bg-indigo-500/30" />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500/30" />
                                     </span>
                                 </div>
 
@@ -97,9 +97,9 @@ const InquirySandbox = () => {
                                             {consent && <div className="w-2 h-2 bg-white rounded-full" />}
                                         </div>
                                         <div>
-                                            <div className="text-xs font-bold text-white group-hover:text-indigo-400 transition-colors">GRANT PERMISSION</div>
+                                            <div className="text-xs font-bold text-white group-hover:text-blue-400 transition-colors">AUTHORIZE TECH AUDIT</div>
                                             <p className="text-[10px] text-white/30 mt-1 leading-relaxed">
-                                                Grant permission to run the AI governance simulation and receive your assessment results.
+                                                Grant necessary permissions to execute a technical alignment audit across the selected risk vector.
                                             </p>
                                         </div>
                                     </div>

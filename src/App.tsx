@@ -8,13 +8,13 @@ import {
   Mail
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import UnifiedArchitecture from './components/UnifiedArchitecture';
+import EthicsFramework from './components/UnifiedArchitecture';
 import HarmIntelligence from './components/HarmIntelligence';
 import RegulatoryIQ from './components/RegulatoryIQ';
 import CuriosityLab from './components/CuriosityLab';
 import ResearchNexus from './components/ResearchNexus';
 import InquirySandbox from './components/InquirySandbox';
-import GhostChat from './components/GhostChat';
+import EthicsChat from './components/GhostChat';
 import SEO from './components/SEO';
 
 const FamonaVision = () => {
@@ -51,7 +51,7 @@ const FamonaVision = () => {
             <div className="relative w-14 h-14">
               <img
                 src="/logo-shield.png"
-                alt="Famona AI Sovereign Shield"
+                alt="Famona AI Ethics Shield"
                 className="w-full h-full object-contain filter drop-shadow-[0_0_12px_rgba(59,130,246,0.5)] group-hover:scale-110 transition-transform duration-500"
               />
             </div>
@@ -62,10 +62,10 @@ const FamonaVision = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-10 text-[9px] font-black uppercase tracking-[0.3em] text-white/40">
-            <a href="#sandbox" className="hover:text-blue-400 transition-colors">Inquiry Hub</a>
-            <a href="#architecture" className="hover:text-blue-400 transition-colors">Unified Field</a>
+            <a href="#lab" className="hover:text-blue-400 transition-colors">Tech Lab</a>
+            <a href="#framework" className="hover:text-blue-400 transition-colors">Safety Framework</a>
             <a href="#risks" className="hover:text-blue-400 transition-colors">Harm Intel</a>
-            <a href="#diagnostic" className="hover:text-blue-400 transition-colors">Regulatory IQ</a>
+            <a href="#diagnostic" className="hover:text-blue-400 transition-colors">Diagnostic IQ</a>
             <a href="#research" className="hover:text-blue-400 transition-colors">Nexus</a>
           </div>
 
@@ -74,10 +74,10 @@ const FamonaVision = () => {
               <Search className="w-4 h-4" />
             </Button>
             <Button
-              onClick={() => document.getElementById('research')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-white text-black hover:bg-blue-600 hover:text-white rounded-lg px-6 h-10 text-[9px] font-black uppercase tracking-widest transition-all shadow-xl shadow-white/5"
+              onClick={() => document.getElementById('framework')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-blue-600 text-white hover:bg-white hover:text-black rounded-lg px-6 h-10 text-[9px] font-black uppercase tracking-widest transition-all shadow-xl shadow-blue-500/20"
             >
-              Verify CIN
+              System Audit
             </Button>
           </div>
         </div>
@@ -98,15 +98,15 @@ const FamonaVision = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-white/30 max-w-2xl leading-relaxed font-light mb-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-              Dedicated to the research and implementation of ethical AI frameworks and human-aligned intelligence systems.
+              Advancing industrial-grade AI safety through rigorous technical auditing and human-aligned framework research.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-6 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
               <Button size="lg" onClick={() => {
-                const element = document.getElementById('sandbox');
+                const element = document.getElementById('lab');
                 element?.scrollIntoView({ behavior: 'smooth' });
               }} className="bg-blue-600 hover:bg-blue-700 text-white rounded-xl px-12 h-16 text-[11px] font-black uppercase tracking-[0.2em] shadow-2xl shadow-blue-500/20 group">
-                Enter Inquiry Sandbox <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                Enter Research Lab <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
                 size="lg"
@@ -120,12 +120,12 @@ const FamonaVision = () => {
           </div>
         </div>
 
-        <section id="sandbox">
+        <section id="lab">
           <InquirySandbox />
         </section>
 
-        <section id="architecture">
-          <UnifiedArchitecture />
+        <section id="framework">
+          <EthicsFramework />
         </section>
 
         <section id="risks">
@@ -222,7 +222,7 @@ const FamonaVision = () => {
           </div>
         </div>
       </footer >
-      <GhostChat />
+      <EthicsChat />
     </div >
   );
 };

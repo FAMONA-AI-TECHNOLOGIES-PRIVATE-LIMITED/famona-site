@@ -10,7 +10,7 @@ interface AlignmentCertificateProps {
 
 const AlignmentCertificate = ({ score, nodeId, timestamp, onClose }: AlignmentCertificateProps) => {
   const shareStatus = () => {
-    const text = `I just confirmed ${score}% AI Sovereign Alignment on FamonaAI. The future of intelligence is deterministic. Verify yours: #FamonaAI #ResponsibleAI`;
+    const text = `I just confirmed my AI Ethics Awareness on FamonaAI. Responsible intelligence for a better future. Verify yours: #FamonaAI #ResponsibleAI`;
     const url = 'https://famona.ai';
     window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
   };
@@ -40,14 +40,14 @@ const AlignmentCertificate = ({ score, nodeId, timestamp, onClose }: AlignmentCe
         </div>
 
         <h3 className="text-[10px] font-black uppercase tracking-[0.5em] text-blue-400 mb-6 px-6 py-2 border border-blue-400/20 rounded-full inline-block">
-          Sovereign Intelligence Alignment
+          AI Ethics Awareness Assessment
         </h3>
 
         <div className="mb-10">
           <span className="text-7xl md:text-8xl font-black tracking-tighter text-white/95 font-display italic">
             {score}<span className="text-blue-500">%</span>
           </span>
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30 mt-3">Alignment Determinism Score</p>
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30 mt-3">Ethics Awareness Score</p>
         </div>
 
         <div className="grid grid-cols-2 gap-8 w-full mb-12 text-left border-y border-white/5 py-8">
@@ -57,7 +57,7 @@ const AlignmentCertificate = ({ score, nodeId, timestamp, onClose }: AlignmentCe
           </div>
           <div>
             <p className="text-[8px] font-black uppercase tracking-widest text-white/20 mb-1">Status Protocol</p>
-            <p className="text-[11px] font-mono font-bold text-emerald-400">DETERMINISTIC</p>
+            <p className="text-[11px] font-mono font-bold text-emerald-400">VERIFIED</p>
           </div>
           <div className="col-span-2">
             <p className="text-[8px] font-black uppercase tracking-widest text-white/20 mb-1">Extraction Timestamp</p>
@@ -84,7 +84,7 @@ const AlignmentCertificate = ({ score, nodeId, timestamp, onClose }: AlignmentCe
 
         <div className="mt-10 flex items-center gap-2 opacity-20">
           <Sparkles className="w-3 h-3 text-blue-400" />
-          <span className="text-[9px] font-black uppercase tracking-widest">Powered by Ghost-Core v4.3.1</span>
+          <span className="text-[9px] font-black uppercase tracking-widest">Powered by Famona AI Research</span>
         </div>
       </div>
     </div>

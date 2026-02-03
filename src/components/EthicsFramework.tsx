@@ -1,11 +1,11 @@
 import { Shield, Globe, Lock, Cpu, Activity } from 'lucide-react';
 
-const UnifiedArchitecture = () => {
+const EthicsFramework = () => {
     const layers = [
-        { title: "Policy Layer", icon: Globe, color: "text-blue-400", nodes: 1 },
-        { title: "Governance Layer", icon: Shield, color: "text-emerald-400", nodes: 3 },
-        { title: "Compliance Layer", icon: Lock, color: "text-amber-400", nodes: 5 },
-        { title: "Foundation Layer", icon: Cpu, color: "text-indigo-400", nodes: 7 }
+        { title: "Risk Identification", icon: Globe, color: "text-blue-400", nodes: 1 },
+        { title: "Governance Controls", icon: Shield, color: "text-emerald-400", nodes: 3 },
+        { title: "Standardized Compliance", icon: Lock, color: "text-amber-400", nodes: 5 },
+        { title: "Foundation Standards", icon: Cpu, color: "text-indigo-400", nodes: 7 }
     ];
 
     return (
@@ -78,4 +78,4 @@ const UnifiedArchitecture = () => {
     );
 };
 
-export default UnifiedArchitecture;
+export default EthicsFramework;

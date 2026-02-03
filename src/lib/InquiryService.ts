@@ -11,7 +11,7 @@
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz_REPLACE_THIS_WITH_YOUR_ACTUAL_URL/exec";
 
 export interface InquiryData {
-    source: 'SANDBOX' | 'CHAT' | 'DIAGNOSTIC';
+    source: 'SANDBOX' | 'CHAT' | 'DIAGNOSTIC' | 'TECH_CHAT';
     content?: string;
     result?: string;
     email?: string;
@@ -24,7 +24,7 @@ export const logInquiry = async (data: InquiryData) => {
         ...data,
         timestamp: new Date().toISOString(),
         site: 'famonaai.com',
-        protocol: 'AGENTIC_GOS_v4.3'
+        protocol: 'RESEARCH_HUB_v4.3'
     };
 
     console.log(`[AGENTIC_EXTRACTION] Capturing ${data.source} telemetry...`, payload);

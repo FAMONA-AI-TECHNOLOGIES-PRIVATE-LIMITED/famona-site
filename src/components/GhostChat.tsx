@@ -1,17 +1,28 @@
 import { useState, useEffect, useRef } from 'react';
-import { MessageSquare, X, Send, Terminal } from 'lucide-react';
+import { MessageSquare, X, Send, Terminal, ShieldCheck } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { logInquiry } from "../lib/InquiryService";
 
-const GhostChat = () => {
+const EthicsChat = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [messages, setMessages] = useState<{ role: 'bot' | 'user', content: string }[]>([
-        { role: 'bot', content: "SYSTEM: AI Assistant initialized. How can I help you today?" }
+    const [messages, setMessages] = useState<{ role: 'bot' | 'user', content: string, status?: string }[]>([
+        { role: 'bot', content: "FAMONA AI Technical Assistant initialized. I can provide audits on NIST RMF, OECD Principles, and UNESCO AI Ethics. How can I assist your technical inquiry?" }
     ]);
     const [input, setInput] = useState("");
     const [isTyping, setIsTyping] = useState(false);
+    const [reasoningLogs, setReasoningLogs] = useState<string[]>([]);
     const scrollRef = useRef<HTMLDivElement>(null);
+
+    const KNOWLEDGE_BASE: Record<string, string> = {
+        "nist": "NIST AI RMF v1.0 specifies a process-oriented approach: Govern, Map, Measure, and Manage. We recommend using the 'Measure' phase for your current vector.",
+        "oecd": "OECD AI Principles emphasize transparency, explainability, and accountability. Your inquiry aligns with Principle 1.2: Human-centered values and fairness.",
+        "audit": "Initiating Technical Audit Protocol. We are currently analyzing training data bias and alignment drift. Status: VERIFIED.",
+        "safety": "AI Safety requires robust circuit breakers. We recommend implementing 'Deterministic Kill-Switches' at the logic layer.",
+        "framework": "The Famona Ethics Framework integrates NIST and OECD standards into a unified technical substrate for enterprise AI.",
+        "contact": "For deep technical collaboration, please reach out to our research leads at contact@famona.ai.",
+        "hello": "Hello. I am the technical audit assistant. I can help you navigate AI safety frameworks and risk mitigation strategies."
+    };
 
     useEffect(() => {
         if (scrollRef.current) {
@@ -19,41 +30,40 @@ const GhostChat = () => {
         }
     }, [messages, isTyping]);
 
-    const handleSend = () => {
+    const handleSend = async () => {
         if (!input.trim()) return;
 
         const userMsg = input;
         setMessages(prev => [...prev, { role: 'user', content: userMsg }]);
-
-        // Agentic Extraction
-        logInquiry({
-            source: 'CHAT',
-            content: userMsg
-        });
-
         setInput("");
         setIsTyping(true);
+        setReasoningLogs(["Initializing Audit Context...", "Scanning Knowledge Base..."]);
 
-        // Simulate AI Response
-        setTimeout(() => {
-            let response = "Thank you for your inquiry. Our team will review and respond.";
-            if (userMsg.toLowerCase().includes("email") || userMsg.toLowerCase().includes("contact")) {
-                response = "For inquiries, please contact us at contact@famona.ai.";
-            } else if (userMsg.toLowerCase().includes("cin") || userMsg.toLowerCase().includes("legal")) {
-                response = "FAMONA AI Technologies is a registered private limited company. For legal inquiries, please contact us directly.";
-            } else if (userMsg.toLowerCase().includes("who")) {
-                response = "We are FAMONA AI Technologies, focused on ethical AI research and responsible AI solutions.";
+        // Agentic Extraction
+        logInquiry({ source: 'TECH_CHAT', content: userMsg });
+
+        // Simulate Reasoning/Streaming
+        await new Promise(r => setTimeout(r, 800));
+        setReasoningLogs(prev => [...prev, "Mapping to NIST AI RMF...", "Validating Policy Alignment..."]);
+        await new Promise(r => setTimeout(r, 1200));
+
+        let response = "I have analyzed your inquiry. Based on current AI safety standards, we recommend a secondary audit of your alignment vectors. For specific implementation details, please contact our Technical Team.";
+
+        const lowerMsg = userMsg.toLowerCase();
+        for (const [key, val] of Object.entries(KNOWLEDGE_BASE)) {
+            if (lowerMsg.includes(key)) {
+                response = val;
+                break;
             }
+        }
 
-            setMessages(prev => [...prev, { role: 'bot', content: response }]);
-            setIsTyping(false);
-        }, 1500);
+        // Streaming Effect
+        setIsTyping(false);
+        setReasoningLogs([]);
+        setMessages(prev => [...prev, { role: 'bot', content: response, status: 'VERIFIED' }]);
     };
 
-    const copyInsight = (content: string) => {
-        navigator.clipboard.writeText(content);
-        // We could add a toast here if sonner is available
-    };
+
 
     return (
         <div className="fixed bottom-8 right-8 z-[100] font-mono">
@@ -82,28 +92,33 @@ const GhostChat = () => {
                             <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                                 <div className={`relative max-w-[85%] p-4 rounded-2xl text-[11px] leading-relaxed group/msg ${msg.role === 'user'
                                     ? 'bg-blue-600 text-white rounded-tr-none'
-                                    : 'bg-white/5 text-white/70 border border-white/5 rounded-tl-none'
+                                    : 'bg-white/5 text-white/70 border border-white/5 rounded-tl-none shadow-xl'
                                     }`}>
-                                    {msg.content}
-                                    {msg.role === 'bot' && (
-                                        <button
-                                            onClick={() => copyInsight(msg.content)}
-                                            className="absolute -right-8 top-0 opacity-0 group-hover/msg:opacity-100 p-1.5 hover:text-blue-400 transition-all"
-                                            title="Copy Insight"
-                                        >
-                                            <Terminal className="w-3 h-3" />
-                                        </button>
+                                    {msg.status && (
+                                        <div className="flex items-center gap-1.5 mb-2 opacity-50">
+                                            <ShieldCheck className="w-3 h-3 text-emerald-400" />
+                                            <span className="text-[7px] font-black uppercase tracking-widest">{msg.status}_AUDIT</span>
+                                        </div>
                                     )}
+                                    {msg.content}
                                 </div>
                             </div>
                         ))}
                         {isTyping && (
                             <div className="flex justify-start">
-                                <div className="bg-white/5 p-4 rounded-2xl rounded-tl-none border border-white/5">
-                                    <div className="flex gap-1">
-                                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce" />
-                                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce [animation-delay:0.2s]" />
-                                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce [animation-delay:0.4s]" />
+                                <div className="bg-white/5 p-4 rounded-2xl rounded-tl-none border border-white/5 w-full">
+                                    <div className="space-y-2">
+                                        {reasoningLogs.map((log, li) => (
+                                            <div key={li} className="flex items-center gap-2 text-[8px] text-blue-400/60 animate-pulse">
+                                                <Terminal className="w-2 h-2" />
+                                                <span>{log}</span>
+                                            </div>
+                                        ))}
+                                        <div className="flex gap-1 mt-2">
+                                            <div className="w-1 h-1 bg-blue-400 rounded-full animate-bounce" />
+                                            <div className="w-1 h-1 bg-blue-400 rounded-full animate-bounce [animation-delay:0.2s]" />
+                                            <div className="w-1 h-1 bg-blue-400 rounded-full animate-bounce [animation-delay:0.4s]" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -137,4 +152,4 @@ const GhostChat = () => {
     );
 };
 
-export default GhostChat;
+export default EthicsChat;
