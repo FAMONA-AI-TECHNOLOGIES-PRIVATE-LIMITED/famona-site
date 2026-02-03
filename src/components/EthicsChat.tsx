@@ -66,23 +66,23 @@ const EthicsChat = () => {
 
 
     return (
-        <div className="fixed bottom-8 right-8 z-[100] font-mono">
+        <div className="fixed bottom-8 right-8 z-[100] font-sans">
             {!isOpen ? (
                 <Button
                     onClick={() => setIsOpen(true)}
                     className="w-14 h-14 rounded-full bg-blue-600 hover:bg-blue-700 shadow-2xl shadow-blue-500/20 flex items-center justify-center group border border-blue-400/20"
                 >
                     <MessageSquare className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
-                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full border-2 border-[#02020a] animate-pulse" />
+                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full border-2 border-white animate-pulse" />
                 </Button>
             ) : (
-                <div className="w-[350px] md:w-[400px] h-[500px] bg-[#0d0d15] border border-white/10 rounded-3xl shadow-3xl overflow-hidden flex flex-col animate-in slide-in-from-bottom-12 duration-500">
-                    <div className="p-4 bg-white/5 border-b border-white/5 flex items-center justify-between">
+                <div className="w-[350px] md:w-[400px] h-[550px] bg-white border border-slate-200 rounded-3xl shadow-3xl overflow-hidden flex flex-col animate-in slide-in-from-bottom-12 duration-500">
+                    <div className="p-4 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                            <Terminal className="w-4 h-4 text-blue-400" />
-                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/50">AI_ASSISTANT</span>
+                            <Terminal className="w-4 h-4 text-blue-600" />
+                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">AI_ASSISTANT</span>
                         </div>
-                        <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="h-8 w-8 text-white/20 hover:text-white">
+                        <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="h-8 w-8 text-slate-300 hover:text-slate-900">
                             <X className="w-4 h-4" />
                         </Button>
                     </div>
@@ -91,13 +91,13 @@ const EthicsChat = () => {
                         {messages.map((msg, i) => (
                             <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                                 <div className={`relative max-w-[85%] p-4 rounded-2xl text-[11px] leading-relaxed group/msg ${msg.role === 'user'
-                                    ? 'bg-blue-600 text-white rounded-tr-none'
-                                    : 'bg-white/5 text-white/70 border border-white/5 rounded-tl-none shadow-xl'
+                                    ? 'bg-blue-600 text-white rounded-tr-none shadow-lg shadow-blue-500/10'
+                                    : 'bg-slate-50 text-slate-600 border border-slate-100 rounded-tl-none shadow-sm'
                                     }`}>
                                     {msg.status && (
-                                        <div className="flex items-center gap-1.5 mb-2 opacity-50">
-                                            <ShieldCheck className="w-3 h-3 text-emerald-400" />
-                                            <span className="text-[7px] font-black uppercase tracking-widest">{msg.status}_AUDIT</span>
+                                        <div className="flex items-center gap-1.5 mb-2 opacity-70">
+                                            <ShieldCheck className="w-3 h-3 text-emerald-600" />
+                                            <span className="text-[7px] font-black uppercase tracking-widest text-emerald-700">{msg.status}_AUDIT</span>
                                         </div>
                                     )}
                                     {msg.content}
@@ -106,18 +106,18 @@ const EthicsChat = () => {
                         ))}
                         {isTyping && (
                             <div className="flex justify-start">
-                                <div className="bg-white/5 p-4 rounded-2xl rounded-tl-none border border-white/5 w-full">
+                                <div className="bg-slate-50 p-4 rounded-2xl rounded-tl-none border border-slate-100 w-full">
                                     <div className="space-y-2">
                                         {reasoningLogs.map((log, li) => (
-                                            <div key={li} className="flex items-center gap-2 text-[8px] text-blue-400/60 animate-pulse">
-                                                <Terminal className="w-2 h-2" />
+                                            <div key={li} className="flex items-center gap-2 text-[8px] text-blue-600/60 animate-pulse">
+                                                <Terminal className="w-22 h-2" />
                                                 <span>{log}</span>
                                             </div>
                                         ))}
                                         <div className="flex gap-1 mt-2">
-                                            <div className="w-1 h-1 bg-blue-400 rounded-full animate-bounce" />
-                                            <div className="w-1 h-1 bg-blue-400 rounded-full animate-bounce [animation-delay:0.2s]" />
-                                            <div className="w-1 h-1 bg-blue-400 rounded-full animate-bounce [animation-delay:0.4s]" />
+                                            <div className="w-1 h-1 bg-blue-600 rounded-full animate-bounce" />
+                                            <div className="w-1 h-1 bg-blue-600 rounded-full animate-bounce [animation-delay:0.2s]" />
+                                            <div className="w-1 h-1 bg-blue-600 rounded-full animate-bounce [animation-delay:0.4s]" />
                                         </div>
                                     </div>
                                 </div>
@@ -125,25 +125,25 @@ const EthicsChat = () => {
                         )}
                     </div>
 
-                    <div className="p-4 bg-white/5 border-t border-white/5">
+                    <div className="p-6 bg-slate-50/50 border-t border-slate-100">
                         <div className="relative flex items-center">
                             <Input
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
                                 onKeyDown={(e) => e.key === 'Enter' && handleSend()}
                                 placeholder="Inquire node status..."
-                                className="bg-black/50 border-white/10 text-[11px] h-11 pl-4 pr-12 rounded-xl focus-visible:ring-blue-500/50"
+                                className="bg-white border-slate-200 text-[11px] h-12 pl-4 pr-12 rounded-xl focus-visible:ring-blue-600/50"
                             />
                             <Button
                                 onClick={handleSend}
                                 size="icon"
-                                className="absolute right-1 text-blue-400 hover:text-white bg-transparent hover:bg-transparent"
+                                className="absolute right-1 text-blue-600 hover:text-blue-700 bg-transparent hover:bg-transparent"
                             >
-                                <Send className="w-4 h-4" />
+                                <Send className="w-4 h-4 ml-2" />
                             </Button>
                         </div>
-                        <p className="text-[8px] text-white/20 mt-3 text-center uppercase tracking-widest font-black">
-                            Powered by Famona AI Technologies Pvt Ltd
+                        <p className="text-[8px] text-slate-300 mt-4 text-center uppercase tracking-[0.3em] font-black">
+                            FAMONA AI RESEARCH CLUSTER
                         </p>
                     </div>
                 </div>
