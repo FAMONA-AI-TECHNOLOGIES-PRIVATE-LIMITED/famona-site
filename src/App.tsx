@@ -23,16 +23,19 @@ const FamonaVision = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const frame = requestAnimationFrame(() => setMounted(true));
+    setMounted(true);
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => {
-      cancelAnimationFrame(frame);
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  if (!mounted) return null;
+  if (!mounted) return (
+    <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" />
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-white text-slate-900 selection:bg-blue-100 font-sans antialiased overflow-x-hidden">
