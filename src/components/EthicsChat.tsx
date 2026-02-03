@@ -110,7 +110,7 @@ const EthicsChat = () => {
                                     <div className="space-y-2">
                                         {reasoningLogs.map((log, li) => (
                                             <div key={li} className="flex items-center gap-2 text-[8px] text-blue-600/60 animate-pulse">
-                                                <Terminal className="w-22 h-2" />
+                                                <Terminal className="w-2.5 h-2.5" />
                                                 <span>{log}</span>
                                             </div>
                                         ))}
