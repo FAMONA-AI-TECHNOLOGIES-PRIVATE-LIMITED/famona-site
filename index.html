@@ -31,7 +31,19 @@
 </head>
 
 <body class="bg-white">
-  <div id="root"></div>
+  <div id="root">
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; font-family: sans-serif; text-align: center; padding: 20px;">
+      <h2 style="font-weight: 900; color: #1e293b; margin-bottom: 10px;">FAMONA AI INITIALIZING...</h2>
+      <p style="color: #64748b; font-size: 14px; max-width: 400px;">If this screen persists, please ensure JavaScript is enabled or try a modern browser. The application is attempting to mount the Sovereign GOS protocol.</p>
+      <div style="margin-top: 20px; width: 30px; height: 30px; border: 4px solid #2563eb; border-top-color: transparent; border-radius: 50%; animate: spin 1s linear infinite;"></div>
+    </div>
+  </div>
+  <noscript>
+    <div style="padding: 20px; text-align: center; background: #fff1f2; color: #be123c;">
+      <strong>Error: JavaScript Required</strong><br>
+      Please enable JavaScript to access the Famona AI research hub.
+    </div>
+  </noscript>
   <script type="module" src="/src/main.tsx"></script>
 
 </body>

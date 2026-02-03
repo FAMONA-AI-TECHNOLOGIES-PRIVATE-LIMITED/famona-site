@@ -5,8 +5,10 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [react()],
   build: {
+    target: 'es2020',
     sourcemap: false,
     minify: 'esbuild',
+    reportCompressedSize: false,
   },
   resolve: {
     alias: {
