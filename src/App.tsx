@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import {
-  Search,
   ArrowRight,
   Github,
   Twitter,
@@ -10,12 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import EthicsFramework from './components/EthicsFramework';
 import HarmIntelligence from './components/HarmIntelligence';
-import RegulatoryIQ from './components/RegulatoryIQ';
-import CuriosityLab from './components/CuriosityLab';
 import ResearchNexus from './components/ResearchNexus';
-import InquirySandbox from './components/InquirySandbox';
-import TelemetryPulse from './components/TelemetryPulse';
-import AlignmentHub from './components/AlignmentHub';
 import SEO from './components/SEO';
 
 const FamonaVision = () => {
@@ -46,10 +40,10 @@ const FamonaVision = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-12">
-            {['Protocol', 'Intelligence', 'Governance', 'Research'].map((item) => (
+            {['Framework', 'Intelligence', 'Research'].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className="text-[11px] font-black uppercase tracking-widest text-slate-400 hover:text-blue-600 transition-colors">{item}</a>
             ))}
-            <Button className="bg-slate-900 text-white rounded-xl px-8 h-12 font-black uppercase tracking-widest text-[10px] hover:bg-blue-600 transition-all">Portal</Button>
+            <Button className="border-slate-200 text-slate-400 hover:text-blue-600 rounded-xl px-8 h-12 font-black uppercase tracking-widest text-[10px] variant='outline'">Contact</Button>
           </div>
         </div>
       </nav>
@@ -63,8 +57,8 @@ const FamonaVision = () => {
 
           <div className="container mx-auto px-6 text-center relative">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-blue-50 border border-blue-100 mb-12">
-              <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-              <span className="text-[10px] font-black uppercase tracking-widest text-blue-900">v4.3.1 Active // GOS Mainnet Ready</span>
+              <div className="w-2 h-2 rounded-full bg-blue-600" />
+              <span className="text-[10px] font-black uppercase tracking-widest text-blue-900 italic">Institutional Research & Policy</span>
             </div>
 
             <h1 className="text-6xl md:text-8xl lg:text-[130px] font-black tracking-tighter uppercase italic leading-[0.75] mb-12">
@@ -78,29 +72,15 @@ const FamonaVision = () => {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Button className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white h-16 px-12 rounded-2xl font-black uppercase tracking-[0.2em] text-[11px] transition-all shadow-xl shadow-blue-500/20 group">
-                Establish Protocol <ArrowRight className="ml-3 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" className="w-all sm:w-auto h-16 px-12 rounded-2xl border-slate-200 font-black uppercase tracking-[0.2em] text-[11px] text-slate-400 hover:bg-slate-50 transition-all">
-                Technical Nexus
+                Review Framework <ArrowRight className="ml-3 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
           </div>
         </section>
 
-        <section id="protocol"><EthicsFramework /></section>
+        <section id="framework"><EthicsFramework /></section>
         <section id="intelligence"><HarmIntelligence /></section>
-        <section id="governance"><RegulatoryIQ /></section>
-
-        <div className="bg-slate-50 py-32 border-y border-slate-100 overflow-hidden relative">
-          <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#1e293b 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
-          <TelemetryPulse />
-        </div>
-
         <section id="research"><ResearchNexus /></section>
-
-        <AlignmentHub />
-        <InquirySandbox />
-        <CuriosityLab />
 
         <section className="py-32 bg-slate-900 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent" />

@@ -65,9 +65,9 @@ const ResearchNexus = () => {
                                     </div>
                                     <div>
                                         <div className="text-[10px] font-black uppercase tracking-widest text-slate-300 mb-1">Status</div>
-                                        <div className="text-xs font-bold text-emerald-600 uppercase flex items-center gap-2">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
-                                            ACTIVE_NODE
+                                        <div className="text-xs font-bold text-slate-900 uppercase flex items-center gap-2">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+                                            REGISTERED_ENTITY
                                         </div>
                                     </div>
                                 </div>
@@ -79,8 +79,8 @@ const ResearchNexus = () => {
                                 <Library className="w-5 h-5 text-slate-400" />
                             </div>
                             <div className="text-[10px] font-black uppercase tracking-widest text-slate-400 leading-relaxed">
-                                ARCHIVED RESEARCH VAULT <br />
-                                <span className="text-blue-600">ACCESS_RESTRICTED.sys</span>
+                                DOCUMENT REPOSITORY <br />
+                                <span className="text-blue-600">PUBLIC_ACCESS</span>
                             </div>
                         </div>
                     </div>
